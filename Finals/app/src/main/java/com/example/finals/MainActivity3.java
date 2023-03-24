@@ -21,6 +21,8 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         TextView signup = findViewById(R.id.login);
+        Database database = new Database(MainActivity3.this);
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
