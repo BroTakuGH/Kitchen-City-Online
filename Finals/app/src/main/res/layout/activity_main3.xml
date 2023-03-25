@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText3"
+            android:id="@+id/school_id_input"
             android:layout_width="256dp"
             android:layout_height="48dp"
             android:hint="School ID"
@@ -47,6 +47,7 @@
             app:layout_constraintVertical_bias="0.338" />
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_input"
             android:layout_width="256dp"
             android:layout_height="48dp"
             android:hint="Name"
@@ -56,10 +57,10 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.715" />
+            app:layout_constraintVertical_bias="0.718" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText2"
+            android:id="@+id/school_email_input"
             android:layout_width="256dp"
             android:layout_height="48dp"
             android:hint="School email"
@@ -72,19 +73,20 @@
             app:layout_constraintVertical_bias="0.591" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/password_input"
             android:layout_width="256dp"
             android:layout_height="48dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="99dp"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.841" />
+            app:layout_constraintTop_toBottomOf="@+id/name_input"
+            app:passwordToggleEnabled="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
