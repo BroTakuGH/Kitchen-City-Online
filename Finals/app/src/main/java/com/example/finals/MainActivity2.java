@@ -20,7 +20,9 @@ public class MainActivity2 extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main2);
 
-        TextView signup = findViewById(R.id.login);
+        TextView signup = findViewById(R.id.signup);
+        TextView login = findViewById(R.id.loginButton);
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){

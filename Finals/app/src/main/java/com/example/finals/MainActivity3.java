@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,7 +47,7 @@ private EditText password_input;
         password_input = findViewById(R.id.password_input);
         Methods methods = new Methods();
 
-        TextView signup = findViewById(R.id.signup);
+        TextView signup = findViewById(R.id.loginButton);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -57,31 +56,32 @@ private EditText password_input;
                 methods.SetUserName(name_input.getText().toString());
                 methods.SetPass(password_input.getText().toString());
 
-               // if(methods.GetSchoolID().isEmpty() || methods.GetPassword().isEmpty() || methods.GetName().isEmpty() || methods.GetSchoolGmail().isEmpty()){
-                    Toast.makeText(MainActivity3.this,"School ID, School Gmail, UserName and Password Cannot Be Empty", Toast.LENGTH_SHORT).show();
-               // }else{
-                    databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(snapshot.hasChild(methods.GetSchoolID())){
-                                Toast.makeText(MainActivity3.this, "This ID is already registered", Toast.LENGTH_SHORT).show();
-                            }else{
-                                databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolGmail").setValue(methods.GetSchoolGmail());
-                                databaseReference.child("Users").child(methods.GetSchoolID()).child("UserName").setValue(methods.GetName());
-                                databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolPassword").setValue(methods.GetPassword());
+                    if(methods.GetSchoolID().isEmpty()||methods.GetPassword().isEmpty()||methods.GetSchoolGmail().isEmpty()||methods.GetName().isEmpty()){
+                        Toast.makeText(MainActivity3.this, "Please Fill all Fields", Toast.LENGTH_SHORT).show();
+                    } else {
+                        databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                if (snapshot.hasChild(methods.GetSchoolID())) {
+                                    Toast.makeText(MainActivity3.this, "This ID is already registered", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolGmail").setValue(methods.GetSchoolGmail());
+                                    databaseReference.child("Users").child(methods.GetSchoolID()).child("UserName").setValue(methods.GetName());
+                                    databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolPassword").setValue(methods.GetPassword());
 
-                                Toast.makeText(MainActivity3.this,"User registered succesfully",Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(MainActivity3.this,MainActivity2.class);
-                                startActivity(intent);}
-                        }
+                                    Toast.makeText(MainActivity3.this, "User registered succesfully", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(MainActivity3.this, MainActivity2.class);
+                                    startActivity(intent);
+                                }
+                            }
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
 
-                        }
-                    });
-                //}
-
+                            }
+                        });
+                        
+                    }
                 };
 
         });
