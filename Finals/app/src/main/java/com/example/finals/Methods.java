@@ -29,6 +29,7 @@ public class Methods {
     public String GetName(){
         return userName;
     }
+
     public void SetPass(String ppass){
         this.password = ppass;
     }

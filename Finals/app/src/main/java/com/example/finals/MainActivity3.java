@@ -28,7 +28,7 @@ private EditText email_input;
 private EditText name_input;
 private EditText password_input;
 
-     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kitchencityonline-1fbdb-default-rtdb.asia-southeast1.firebasedatabase.app/");
+     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kitchencityonline-1fbdb-default-rtdb.asia-southeast1.firebasedatabase.app");
 
 
     @Override
@@ -48,18 +48,18 @@ private EditText password_input;
         password_input = findViewById(R.id.password_input);
         Methods methods = new Methods();
 
-        TextView signup = findViewById(R.id.login);
+        TextView signup = findViewById(R.id.signup);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 methods.SetSchoolId(id_input.getText().toString());
                 methods.SetSchoolGmail(email_input.getText().toString());
                 methods.SetUserName(name_input.getText().toString());
-                methods.SetUserName(password_input.getText().toString());
+                methods.SetPass(password_input.getText().toString());
 
-                if(methods.GetSchoolID().isEmpty()|| methods.GetPassword().isEmpty()||methods.GetName().isEmpty()||methods.GetSchoolGmail().isEmpty()){
+               // if(methods.GetSchoolID().isEmpty() || methods.GetPassword().isEmpty() || methods.GetName().isEmpty() || methods.GetSchoolGmail().isEmpty()){
                     Toast.makeText(MainActivity3.this,"School ID, School Gmail, UserName and Password Cannot Be Empty", Toast.LENGTH_SHORT).show();
-                }else{
+               // }else{
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -68,7 +68,7 @@ private EditText password_input;
                             }else{
                                 databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolGmail").setValue(methods.GetSchoolGmail());
                                 databaseReference.child("Users").child(methods.GetSchoolID()).child("UserName").setValue(methods.GetName());
-                                databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolGmail").setValue(methods.GetPassword());
+                                databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolPassword").setValue(methods.GetPassword());
 
                                 Toast.makeText(MainActivity3.this,"User registered succesfully",Toast.LENGTH_SHORT).show();
                                 Intent intent=new Intent(MainActivity3.this,MainActivity2.class);
@@ -80,7 +80,7 @@ private EditText password_input;
 
                         }
                     });
-                }
+                //}
 
                 };
 
