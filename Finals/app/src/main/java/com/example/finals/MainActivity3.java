@@ -67,7 +67,7 @@ private EditText password_input;
                                 } else {
                                     databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolGmail").setValue(methods.GetSchoolGmail());
                                     databaseReference.child("Users").child(methods.GetSchoolID()).child("UserName").setValue(methods.GetName());
-                                    databaseReference.child("Users").child(methods.GetSchoolID()).child("SchoolPassword").setValue(methods.GetPassword());
+                                    databaseReference.child("Users").child(methods.GetSchoolID()).child("Password").setValue(methods.GetPassword());
 
                                     Toast.makeText(MainActivity3.this, "User registered succesfully", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(MainActivity3.this, MainActivity2.class);
@@ -80,7 +80,7 @@ private EditText password_input;
 
                             }
                         });
-                        
+
                     }
                 };
 

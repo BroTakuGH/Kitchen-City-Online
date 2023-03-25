@@ -44,6 +44,7 @@
             app:layout_constraintVertical_bias="0.338" />
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userID"
             android:layout_width="256dp"
             android:layout_height="48dp"
             android:hint="School ID"
