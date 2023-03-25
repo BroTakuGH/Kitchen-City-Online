@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "476552409203",
+    "project_id": "kitchencityonline-1fbdb",
+    "storage_bucket": "kitchencityonline-1fbdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476552409203:android:f743bac3b537a3be78fa06",
+        "android_client_info": {
+          "package_name": "com.example.finals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476552409203-9f5niqgrcsis8dg2p4j7qupl8s2e6gac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finals",
+            "certificate_hash": "2a94d398e44a4f1208c8864893ad6aebed2f9a46"
+          }
+        },
+        {
+          "client_id": "476552409203-u9060h9a7oouifsacrq57h0nl4r2f45t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOnLtKFNqPrlFFVNz-IWDl04dzRUQdT60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476552409203-u9060h9a7oouifsacrq57h0nl4r2f45t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
