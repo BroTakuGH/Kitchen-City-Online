@@ -54,19 +54,21 @@ public class MainActivity2 extends AppCompatActivity {
                 if(id.isEmpty()||pass.isEmpty()){
                     Toast.makeText(MainActivity2.this, "Please Enter Your ID/Password", Toast.LENGTH_SHORT).show();
                 }else{
-                    databaseReference.child("user").addListenerForSingleValueEvent(new ValueEventListener() {
+
+                    databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if(snapshot.hasChild(id)){
                                final String getPassword = snapshot.child(id).child("Password").getValue(String.class);
+
                                if(getPassword.equals(pass)){
                                    Toast.makeText(MainActivity2.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
                                }else{
-                                   Toast.makeText(MainActivity2.this, "Wrong Password", Toast.LENGTH_SHORT).show();
+                                   Toast.makeText(MainActivity2.this, "Invalid SchoolID and/or Password", Toast.LENGTH_SHORT).show();
                                }
 
                             }else{
-                                Toast.makeText(MainActivity2.this, "No Account Found", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity2.this, "Invalid SchoolID and/or Password", Toast.LENGTH_SHORT).show();
                             }
                         }
 
