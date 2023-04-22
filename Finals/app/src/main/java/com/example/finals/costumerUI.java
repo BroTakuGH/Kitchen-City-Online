@@ -26,7 +26,7 @@ public class costumerUI extends AppCompatActivity {
         getSupportActionBar().hide();
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.costumerdashboard);
+        setContentView(R.layout.costumerui);
 
         ImageView firstMenu = findViewById(R.id.firstMenu);
         ImageView secondMenu = findViewById(R.id.secondMenu);

@@ -47,9 +47,21 @@ private EditText password_input;
         password_input = findViewById(R.id.password_input);
         Methods methods = new Methods();
 
+
+        TextView backToLogin = findViewById(R.id.signup);
         TextView signup = findViewById(R.id.loginButton);
+        backToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity3.this,MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view){
                 methods.SetSchoolId(id_input.getText().toString());
                 methods.SetSchoolGmail(email_input.getText().toString());
@@ -70,7 +82,7 @@ private EditText password_input;
                                     databaseReference.child("Users").child(methods.GetSchoolID()).child("Password").setValue(methods.GetPassword());
 
                                     Toast.makeText(MainActivity3.this, "User registered succesfully", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(MainActivity3.this, MainActivity2.class);
+                                    Intent intent = new Intent(MainActivity3.this, costumerUI.class);
                                     startActivity(intent);
                                 }
                             }

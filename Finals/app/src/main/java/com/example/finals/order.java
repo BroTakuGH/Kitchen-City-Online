@@ -1,4 +1,4 @@
-package com.example.dashboardui;
+package com.example.finals;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
