@@ -39,7 +39,7 @@ private EditText password_input;
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_main3);
 
         id_input = findViewById(R.id.school_id_input);

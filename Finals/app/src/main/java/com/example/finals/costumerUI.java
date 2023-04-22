@@ -26,7 +26,7 @@ public class costumerUI extends AppCompatActivity {
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
+
 
         setContentView(R.layout.costumerui);
 

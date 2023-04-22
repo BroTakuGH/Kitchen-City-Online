@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+
 
         TextView getstarted = findViewById(R.id.textView);
         getstarted.setOnClickListener(new View.OnClickListener() {
