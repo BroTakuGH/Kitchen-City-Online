@@ -22,6 +22,14 @@
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".costumerUI"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".order"
+            android:exported="true">
+        </activity>
 
 
         <activity

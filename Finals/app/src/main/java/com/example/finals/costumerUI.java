@@ -23,9 +23,11 @@ public class costumerUI extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getSupportActionBar().hide();
+
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.costumerui);
 
         ImageView firstMenu = findViewById(R.id.firstMenu);
@@ -40,7 +42,7 @@ public class costumerUI extends AppCompatActivity {
             @Override
             public void onClick(View view){
 
-                Intent intent=new Intent(com.example.finals.costumerUI.this,costumerUI.class);
+                Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                 startActivity(intent);
 
             }
