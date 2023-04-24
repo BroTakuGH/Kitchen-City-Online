@@ -49,6 +49,7 @@ public class MainActivity4 extends AppCompatActivity {
  EditText price;
  final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
  final private StorageReference storageReference = FirebaseStorage.getInstance().getReference();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
