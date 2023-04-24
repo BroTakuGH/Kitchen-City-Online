@@ -40,6 +40,7 @@ public class MainActivity4 extends AppCompatActivity {
  private ImageView uploadImage;
  Button button;
  EditText price;
+ EditText price2;
  final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
  final private StorageReference storageReference = FirebaseStorage.getInstance().getReference();
 
@@ -49,6 +50,7 @@ public class MainActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
         button = findViewById(R.id.button2);
         price = findViewById(R.id.editText);
+        price2 = findViewById(R.id.editText2);
         uploadImage = findViewById(R.id.imageView);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
@@ -88,6 +90,7 @@ public class MainActivity4 extends AppCompatActivity {
     }
     private void uploadToFirebase (Uri uri){
         String caption = price.getText().toString();
+        String price22 = price2.getText().toString();
         final StorageReference imageReference = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(uri));
 
         imageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -97,8 +100,10 @@ public class MainActivity4 extends AppCompatActivity {
                     @Override
                     public void onSuccess(Uri uri) {
                     DataClass dataClass = new DataClass(uri.toString(), caption);
-                    String key = databaseReference.push().getKey();
-                    databaseReference.child(key).setValue(dataClass);
+
+                    databaseReference.child("1").setValue(dataClass);
+                    databaseReference.child("1").child("price").setValue(price22);
+
                         Toast.makeText(MainActivity4.this, "Uploaded", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity4.this, adminui.class);
                         startActivity(intent);
