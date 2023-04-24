@@ -48,11 +48,12 @@ public class costumerUI extends AppCompatActivity {
         firstMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                databaseReference.child("Images").child("1").child("imageURL");;
-                String imageURL = databaseReference.toString();
-                Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
-                intent.putExtra("image@#",imageURL);
-                startActivity(intent);
+                //String imageURL = databaseReference.child("Images").child("1").child("imageURL").toString();
+
+                //System.out.println(imageURL);
+                //Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                //intent.putExtra("image@#",imageURL);
+                //startActivity(intent);
             }
 
         });
