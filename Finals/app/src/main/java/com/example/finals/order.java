@@ -28,7 +28,7 @@ private ImageView itemView;
 
    itemView = findViewById(R.id.ItemView);
 
-    Glide.with(this).load(getIntent().getStringExtra("image@#"))
+    Glide.with(this).load(getIntent().getStringExtra("imageo"))
             .into(itemView);
 
 

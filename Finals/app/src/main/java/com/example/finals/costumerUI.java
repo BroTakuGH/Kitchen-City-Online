@@ -48,12 +48,25 @@ public class costumerUI extends AppCompatActivity {
         firstMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                //String imageURL = databaseReference.child("Images").child("1").child("imageURL").toString();
+                final String[] imageURL = {""};
+                databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            imageURL[0] = snapshot.child("1").child("imageURL").getValue(String.class);
 
-                //System.out.println(imageURL);
-                //Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
-                //intent.putExtra("image@#",imageURL);
-                //startActivity(intent);
+                            System.out.println("WSWSW" + imageURL[0]);
+                            Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                            intent.putExtra("imageo", imageURL[0]);
+                            startActivity(intent);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
             }
 
         });
