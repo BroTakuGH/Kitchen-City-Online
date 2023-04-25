@@ -76,7 +76,7 @@ public class costumerUI extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         imageURL[0] = snapshot.child("2").child("imageURL").getValue(String.class);
-                        Intent intent=new Intent(com.example.finals.costumerUI.this,costumerUI.class);
+                        Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                         intent.putExtra("imageo", imageURL[0]);
                         startActivity(intent);
                     }
@@ -95,9 +95,21 @@ public class costumerUI extends AppCompatActivity {
         thirdMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+            databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    imageURL[0] = snapshot.child("3").child("imageURL").getValue(String.class);
+                    Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                    intent.putExtra("imageo", imageURL[0]);
+                    startActivity(intent);
+                }
 
-                Intent intent=new Intent(com.example.finals.costumerUI.this,MainActivity2.class);
-                startActivity(intent);
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
             }
 
@@ -106,9 +118,21 @@ public class costumerUI extends AppCompatActivity {
         fourthMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        imageURL[0] = snapshot.child("4").child("imageURL").getValue(String.class);
+                        Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                        intent.putExtra("imageo", imageURL[0]);
+                        startActivity(intent);
+                    }
 
-                Intent intent=new Intent(com.example.finals.costumerUI.this,MainActivity2.class);
-                startActivity(intent);
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
 
             }
 
@@ -117,9 +141,21 @@ public class costumerUI extends AppCompatActivity {
         fifthMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        imageURL[0] = snapshot.child("5").child("imageURL").getValue(String.class);
+                        Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                        intent.putExtra("imageo", imageURL[0]);
+                        startActivity(intent);
+                    }
 
-                Intent intent=new Intent(com.example.finals.costumerUI.this,MainActivity2.class);
-                startActivity(intent);
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
 
             }
 
@@ -128,9 +164,21 @@ public class costumerUI extends AppCompatActivity {
         sixthMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+            databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    imageURL[0] = snapshot.child("6").child("imageURL").getValue(String.class);
+                    Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                    intent.putExtra("imageo", imageURL[0]);
+                    startActivity(intent);
+                }
 
-                Intent intent=new Intent(com.example.finals.costumerUI.this,MainActivity2.class);
-                startActivity(intent);
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
             }
 
