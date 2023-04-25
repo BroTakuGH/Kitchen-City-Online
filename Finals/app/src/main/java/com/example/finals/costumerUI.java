@@ -1,5 +1,6 @@
 package com.example.finals;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -10,14 +11,20 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class costumerUI extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
-
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kitchencityonline-1fbdb-default-rtdb.asia-southeast1.firebasedatabase.app");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +48,24 @@ public class costumerUI extends AppCompatActivity {
         firstMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                final String[] imageURL = {""};
+                databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            imageURL[0] = snapshot.child("1").child("imageURL").getValue(String.class);
 
-                Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
-                startActivity(intent);
+                            System.out.println("WSWSW" + imageURL[0]);
+                            Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                            intent.putExtra("imageo", imageURL[0]);
+                            startActivity(intent);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
 
             }
 
