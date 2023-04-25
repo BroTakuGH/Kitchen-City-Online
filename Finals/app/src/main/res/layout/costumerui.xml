@@ -77,6 +77,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/firstCaption"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -89,6 +90,7 @@
                                 android:typeface="sans" />
 
                             <TextView
+                                android:id="@+id/firstPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -189,6 +191,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/secondCaption"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -201,6 +204,7 @@
                                 android:typeface="sans" />
 
                             <TextView
+                                android:id="@+id/secondPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -302,6 +306,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/thirdCaption"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -314,6 +319,7 @@
                                 android:typeface="sans" />
 
                             <TextView
+                                android:id="@+id/thirdPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -414,6 +420,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/forthCaption"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -426,6 +433,7 @@
                                 android:typeface="sans" />
 
                             <TextView
+                                android:id="@+id/forthPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -526,6 +534,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/fifthCaption"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -538,6 +547,7 @@
                                 android:typeface="sans" />
 
                             <TextView
+                                android:id="@+id/fifthPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -639,6 +649,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/sixthCaption"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -651,6 +662,7 @@
                                 android:typeface="sans" />
 
                             <TextView
+                                android:id="@+id/sixthPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
