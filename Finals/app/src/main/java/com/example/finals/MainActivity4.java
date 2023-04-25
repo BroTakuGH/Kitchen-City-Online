@@ -34,8 +34,7 @@ import com.google.firebase.storage.UploadTask;
 
 
 public class MainActivity4 extends AppCompatActivity {
-
-
+    String id;
  Uri imageUri;
  private ImageView uploadImage;
  Button button;
@@ -52,6 +51,7 @@ public class MainActivity4 extends AppCompatActivity {
         price = findViewById(R.id.editText);
         price2 = findViewById(R.id.editText2);
         uploadImage = findViewById(R.id.imageView);
+        id =(getIntent().getStringExtra("id"));
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -101,8 +101,8 @@ public class MainActivity4 extends AppCompatActivity {
                     public void onSuccess(Uri uri) {
                     DataClass dataClass = new DataClass(uri.toString(), caption);
 
-                    databaseReference.child("1").setValue(dataClass);
-                    databaseReference.child("1").child("price").setValue(price22);
+                    databaseReference.child(id).setValue(dataClass);
+                    databaseReference.child(id).child("price").setValue(price22);
 
                         Toast.makeText(MainActivity4.this, "Uploaded", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity4.this, adminui.class);

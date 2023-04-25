@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemEdit0"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#181D2D"
@@ -44,10 +45,10 @@
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
-                    android:padding="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -71,10 +72,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
                                 android:text="₱ 150"
-                                android:layout_marginBottom="5dp"/>
-
+                                android:textSize="18dp" />
 
 
                             <LinearLayout
@@ -85,23 +85,27 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -109,17 +113,18 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
                             android:layout_gravity="center_vertical"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/itemEdit1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:clickable="true"
                                 android:text="Edit"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"/>
-
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
 
 
                         </LinearLayout>
@@ -139,10 +144,10 @@
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
-                    android:padding="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -157,19 +162,18 @@
 
 
                             <TextView
-                                android:textColor="#F22F11"
-                                android:textSize="24dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Sisig"/>
+                                android:text="Sisig"
+                                android:textColor="#F22F11"
+                                android:textSize="24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
                                 android:text="₱ 100"
-                                android:layout_marginBottom="5dp"/>
-
+                                android:textSize="18dp" />
 
 
                             <LinearLayout
@@ -180,23 +184,27 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -204,17 +212,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
                             android:layout_gravity="center_vertical"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/itemEdit2"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:text="Edit"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"/>
-
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
 
 
                         </LinearLayout>
@@ -234,10 +242,10 @@
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
-                    android:padding="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -252,19 +260,18 @@
 
 
                             <TextView
-                                android:textColor="#F22F11"
-                                android:textSize="24dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="lumpia"/>
+                                android:text="lumpia"
+                                android:textColor="#F22F11"
+                                android:textSize="24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
                                 android:text="₱ 80"
-                                android:layout_marginBottom="5dp"/>
-
+                                android:textSize="18dp" />
 
 
                             <LinearLayout
@@ -275,23 +282,27 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -299,17 +310,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
                             android:layout_gravity="center_vertical"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/itemEdit3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Edit"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"/>
-
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
 
 
                         </LinearLayout>
@@ -329,10 +340,10 @@
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
-                    android:padding="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -346,19 +357,18 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:textColor="#F22F11"
-                                android:textSize="24dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Fried Chicken"/>
+                                android:text="Fried Chicken"
+                                android:textColor="#F22F11"
+                                android:textSize="24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
                                 android:text="₱ 90"
-                                android:layout_marginBottom="5dp"/>
-
+                                android:textSize="18dp" />
 
 
                             <LinearLayout
@@ -369,23 +379,27 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -393,17 +407,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
                             android:layout_gravity="center_vertical"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/itemEdit4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Edit"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"/>
-
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
 
 
                         </LinearLayout>
@@ -423,10 +437,10 @@
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
-                    android:padding="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -441,19 +455,18 @@
 
 
                             <TextView
-                                android:textColor="#F22F11"
-                                android:textSize="24dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kaldereta"/>
+                                android:text="Kaldereta"
+                                android:textColor="#F22F11"
+                                android:textSize="24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
                                 android:text="₱ 100"
-                                android:layout_marginBottom="5dp"/>
-
+                                android:textSize="18dp" />
 
 
                             <LinearLayout
@@ -464,23 +477,27 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -488,17 +505,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
                             android:layout_gravity="center_vertical"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/itemEdit5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Edit"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"/>
-
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
 
 
                         </LinearLayout>
@@ -519,10 +536,10 @@
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
-                    android:padding="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -537,19 +554,18 @@
 
 
                             <TextView
-                                android:textColor="#F22F11"
-                                android:textSize="24dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Barbeque"/>
+                                android:text="Barbeque"
+                                android:textColor="#F22F11"
+                                android:textSize="24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="18dp"
+                                android:layout_marginBottom="5dp"
                                 android:text="₱ 70"
-                                android:layout_marginBottom="5dp"/>
-
+                                android:textSize="18dp" />
 
 
                             <LinearLayout
@@ -560,23 +576,27 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/rate"/>
+                                    android:src="@drawable/rate" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -584,17 +604,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
                             android:layout_gravity="center_vertical"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <TextView
+                                android:id="@+id/itemEdit6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Edit"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"/>
-
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
 
 
                         </LinearLayout>
@@ -611,9 +631,9 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/menu_bar"
         android:background="@drawable/shape"
-        android:layout_height="wrap_content"/>
+        app:menu="@menu/menu_bar" />
 
 </RelativeLayout>
