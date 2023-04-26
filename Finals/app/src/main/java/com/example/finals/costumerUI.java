@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -86,25 +87,25 @@ public class costumerUI extends AppCompatActivity {
                 imageURLDisplay1[0] = snapshot.child("1").child("imageURL").getValue(String.class);
                 CaptionDisplay1 = snapshot.child("1").child("caption").getValue(String.class);
 
-                PriceDisplay2 = snapshot.child("2").child("price").getValue(String.class);
-                imageURLDisplay2[0] = snapshot.child("2").child("imageURL").getValue(String.class);
-                CaptionDisplay2 = snapshot.child("2").child("caption").getValue(String.class);
-
-                PriceDisplay3 = snapshot.child("3").child("price").getValue(String.class);
-                imageURLDisplay3[0] = snapshot.child("3").child("imageURL").getValue(String.class);
-                CaptionDisplay3 = snapshot.child("3").child("caption").getValue(String.class);
-
-                PriceDisplay4 = snapshot.child("4").child("price").getValue(String.class);
-                imageURLDisplay4[0] = snapshot.child("4").child("imageURL").getValue(String.class);
-                CaptionDisplay4 = snapshot.child("4").child("caption").getValue(String.class);
-
-                PriceDisplay5 = snapshot.child("5").child("price").getValue(String.class);
-                imageURLDisplay5[0] = snapshot.child("5").child("imageURL").getValue(String.class);
-                CaptionDisplay5 = snapshot.child("5").child("caption").getValue(String.class);
-
-                PriceDisplay6 = snapshot.child("6").child("price").getValue(String.class);
-                imageURLDisplay6[0] = snapshot.child("6").child("imageURL").getValue(String.class);
-                CaptionDisplay6 = snapshot.child("6").child("caption").getValue(String.class);
+//                PriceDisplay2 = snapshot.child("2").child("price").getValue(String.class);
+//                imageURLDisplay2[0] = snapshot.child("2").child("imageURL").getValue(String.class);
+//                CaptionDisplay2 = snapshot.child("2").child("caption").getValue(String.class);
+//
+//                PriceDisplay3 = snapshot.child("3").child("price").getValue(String.class);
+//                imageURLDisplay3[0] = snapshot.child("3").child("imageURL").getValue(String.class);
+//                CaptionDisplay3 = snapshot.child("3").child("caption").getValue(String.class);
+//
+//                PriceDisplay4 = snapshot.child("4").child("price").getValue(String.class);
+//                imageURLDisplay4[0] = snapshot.child("4").child("imageURL").getValue(String.class);
+//                CaptionDisplay4 = snapshot.child("4").child("caption").getValue(String.class);
+//
+//                PriceDisplay5 = snapshot.child("5").child("price").getValue(String.class);
+//                imageURLDisplay5[0] = snapshot.child("5").child("imageURL").getValue(String.class);
+//                CaptionDisplay5 = snapshot.child("5").child("caption").getValue(String.class);
+//
+//                PriceDisplay6 = snapshot.child("6").child("price").getValue(String.class);
+//                imageURLDisplay6[0] = snapshot.child("6").child("imageURL").getValue(String.class);
+//                CaptionDisplay6 = snapshot.child("6").child("caption").getValue(String.class);
             }
 
             @Override
@@ -112,8 +113,11 @@ public class costumerUI extends AppCompatActivity {
 
             }
         });
+
+
         //Costumer Display
-//        Glide.with(this).load(imageURLDisplay1).into(firstMenu);
+        System.out.println(imageURLDisplay1 + "TESTTTT");
+        Glide.with(this).load(imageURLDisplay1).into(firstMenu);
 //        Glide.with(this).load(imageURLDisplay2).into(secondMenu);
 //        Glide.with(this).load(imageURLDisplay3).into(thirdMenu);
 //        Glide.with(this).load(imageURLDisplay4).into(fourthMenu);
