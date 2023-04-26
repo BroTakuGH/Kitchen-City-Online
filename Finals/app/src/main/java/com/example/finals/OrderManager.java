@@ -3,7 +3,7 @@ package com.example.finals;
 import java.sql.Array;
 import java.util.ArrayList;
 
-public class OrderManager extends OrderItem {
+public class OrderManager {
     private static volatile OrderManager _Instance;
     public static OrderManager GetInstance() {
         if (_Instance == null) {
@@ -20,14 +20,10 @@ public class OrderManager extends OrderItem {
     public String username;
 
     public ArrayList<OrderItem> orders = new ArrayList<OrderItem>();
+    public float totalPrice;
 
-    public void SetPrice(float getTotalPrice){
-        this.totalPrice = getTotalPrice;
-    }
+    public String listViewContent;
 
-    public float GetPrice(){
-        return totalPrice;
-    }
 
 
 }

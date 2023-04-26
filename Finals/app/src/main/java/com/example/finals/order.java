@@ -47,7 +47,7 @@ public class order extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        OrderItem orderItem = new OrderItem();
+
         setContentView(R.layout.order);
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
@@ -143,12 +143,26 @@ public class order extends AppCompatActivity {
         public void onClick(View v) {
 
 
+//            String captionText = caption.getText().toString();
+//            OrderItem captions = new OrderItem(captionText);
+//            OrderManager.GetInstance().orders.add(caption);
+//            orderItem.SetPrice(totalPrice);
+//            System.out.println(orderItem.GetPrice());
+//            caption.setText(String.valueOf(orderItem.GetPrice()));
             totalPrice += Float.valueOf(price);
-
-            orderItem.SetPrice(totalPrice);
-            System.out.println(orderItem.GetPrice());
-            caption.setText(String.valueOf(orderItem.GetPrice()));
-
+            String captionText = caption.getText().toString();
+            OrderItem captions = new OrderItem(captionText);
+            OrderManager.GetInstance().totalPrice += totalPrice;
+            OrderManager.GetInstance().orders.add(captions);
+            OrderManager.GetInstance().listViewContent += captionText;
+//            OrderManager.GetInstance().listViewContent = "lol";
+            System.out.println(OrderManager.GetInstance().totalPrice);
+            System.out.println(OrderManager.GetInstance().username);
+            for (OrderItem item : OrderManager.GetInstance().orders) {
+                System.out.println(item.mealName);
+            }
+//            String test = OrderManager.GetInstance().listViewContent;
+            System.out.println(OrderManager.GetInstance().listViewContent);
         }
 
         

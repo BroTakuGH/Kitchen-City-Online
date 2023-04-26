@@ -6,22 +6,37 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class cart extends AppCompatActivity {
 
     BottomNavigationView nav2;
 
+
+
+    ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
-
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kitchencityonline-1fbdb-default-rtdb.asia-southeast1.firebasedatabase.app");
         nav2 = findViewById(R.id.nav_bar2);
-
+        String costumerOrder [] = {};
+        String orders2 = OrderManager.GetInstance().listViewContent;
         nav2.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -43,6 +58,34 @@ public class cart extends AppCompatActivity {
             }
         });
 
+        Button button = findViewById(R.id.payOrder);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                String orderss = "";
+                String ha[];
+                List<String> your_array_list = new ArrayList<String>();
+
+                 listView = (ListView) findViewById(R.id.resultsListView);
+                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
+                        (cart.this, R.layout.activity_list_view,R.id.listviewtext, );
+                listView.setAdapter(arrayAdapter);
+//                HashMap<String, String> nameAddresses = new HashMap<>();
+//                nameAddresses.put("lmFAO", "lmfao");
+
+
+
+                for (OrderItem item : OrderManager.GetInstance().orders) {
+                    orderss += item.mealName;
+
+                }
+
+                //databaseReference.child("Users").child(OrderManager.GetInstance().username).child("orders").setValue(orderss);
+
+            }
+        });
 
 
     }

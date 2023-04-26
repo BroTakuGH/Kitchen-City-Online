@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Finals"
         tools:targetApi="31">
         <activity
+            android:name=".ListView"
+            android:exported="false" />
+        <activity
             android:name=".pendingOrders"
             android:exported="true" />
         <activity
@@ -31,9 +34,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity4"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".costumerUI"
             android:exported="true" />
