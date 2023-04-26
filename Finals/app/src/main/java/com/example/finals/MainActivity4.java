@@ -90,7 +90,7 @@ public class MainActivity4 extends AppCompatActivity {
     }
     private void uploadToFirebase (Uri uri){
         String caption = price.getText().toString();
-        String price22 = price2.getText().toString();
+        String price22 = "₱"+price2.getText().toString();
         final StorageReference imageReference = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(uri));
 
         imageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

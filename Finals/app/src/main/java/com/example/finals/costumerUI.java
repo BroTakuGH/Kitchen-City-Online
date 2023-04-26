@@ -8,7 +8,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -17,8 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,7 +42,6 @@ public class costumerUI extends AppCompatActivity {
     String PriceDisplay4;
     String PriceDisplay5;
     String PriceDisplay6;
-    BottomNavigationView nav;
 
     String CaptionDisplay1;
     String CaptionDisplay2;
@@ -64,33 +60,6 @@ public class costumerUI extends AppCompatActivity {
 
         setContentView(R.layout.costumerui);
         //Declaration
-
-        setContentView(R.layout.costumerui);
-        nav = findViewById(R.id.nav_bar);
-
-        nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                    switch (item.getItemId()){
-
-                        case R.id.shoppingCart:
-                            Intent intent=new Intent(costumerUI.this,cart.class);
-                            startActivity(intent);
-                            break;
-
-                        case R.id.logout:
-                            Intent intent2=new Intent(costumerUI.this,MainActivity2.class);
-                            startActivity(intent2);
-                            break;
-
-                    }
-
-                return false;
-            }
-        });
-
-
         ImageView firstMenu = findViewById(R.id.firstMenu);
         TextView firstPrice = findViewById(R.id.firstPrice);
         ImageView secondMenu = findViewById(R.id.secondMenu);
@@ -317,3 +286,4 @@ public class costumerUI extends AppCompatActivity {
 
         };
     }
+
