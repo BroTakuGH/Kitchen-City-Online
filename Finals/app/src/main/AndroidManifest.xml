@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Finals"
         tools:targetApi="31">
         <activity
+            android:name=".pendingOrders"
+            android:exported="true" />
+        <activity
             android:name=".fragment"
             android:exported="true" />
         <activity

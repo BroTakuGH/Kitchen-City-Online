@@ -3,8 +3,6 @@ package com.example.finals;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,34 +10,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class adminui extends AppCompatActivity {
+public class pendingOrders extends AppCompatActivity {
 
-    BottomNavigationView nav4;
+    BottomNavigationView nav3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_pending_orders);
 
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.admin);
 
-        nav4 = findViewById(R.id.nav_bar4);
+        nav3 = findViewById(R.id.nav_bar3);
 
-        nav4.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        nav3.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()){
 
-                    case R.id.shoppingCart:
-                        Intent intent=new Intent(adminui.this,pendingOrders.class);
+                    case R.id.home:
+                        Intent intent=new Intent(pendingOrders.this,adminui.class);
                         startActivity(intent);
                         break;
 
                     case R.id.logout:
-                        Intent intent2=new Intent(adminui.this,MainActivity2.class);
+                        Intent intent2=new Intent(pendingOrders.this,MainActivity2.class);
                         startActivity(intent2);
                         break;
 
@@ -47,7 +42,6 @@ public class adminui extends AppCompatActivity {
                 return false;
             }
         });
-
 
     }
 }
