@@ -20,7 +20,8 @@ import java.util.Objects;
 
 public class order extends AppCompatActivity {
     private ImageView itemView;
-
+    TextView priceView;
+    String price;
     private int extraRice;
     private int royal;
     private int coke;
