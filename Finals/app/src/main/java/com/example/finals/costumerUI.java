@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,8 +29,8 @@ public class costumerUI extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kitchencityonline-1fbdb-default-rtdb.asia-southeast1.firebasedatabase.app");
-    String[] imageURL = {""};
-    String[] imageURLDisplay1 = {""};
+    String imageURL ;
+    String imageURLDisplay1;
     String[] imageURLDisplay2 = {""};
     String[] imageURLDisplay3 = {""};
     String[] imageURLDisplay4 = {""};
@@ -49,6 +50,7 @@ public class costumerUI extends AppCompatActivity {
     String CaptionDisplay4;
     String CaptionDisplay5;
     String CaptionDisplay6;
+    Button Refresh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,12 +81,13 @@ public class costumerUI extends AppCompatActivity {
         TextView caption4 =  findViewById(R.id.forthCaption);
         TextView caption5 =  findViewById(R.id.fifthCaption);
         TextView caption6 =  findViewById(R.id.sixthCaption);
-        //Data Declaration
+        Refresh = findViewById(R.id.RefreshTest);
+
         databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 PriceDisplay1 = snapshot.child("1").child("price").getValue(String.class);
-                imageURLDisplay1[0] = snapshot.child("1").child("imageURL").getValue(String.class);
+                imageURLDisplay1 = snapshot.child("1").child("imageURL").getValue(String.class);
                 CaptionDisplay1 = snapshot.child("1").child("caption").getValue(String.class);
 
 //                PriceDisplay2 = snapshot.child("2").child("price").getValue(String.class);
@@ -106,6 +109,8 @@ public class costumerUI extends AppCompatActivity {
 //                PriceDisplay6 = snapshot.child("6").child("price").getValue(String.class);
 //                imageURLDisplay6[0] = snapshot.child("6").child("imageURL").getValue(String.class);
 //                CaptionDisplay6 = snapshot.child("6").child("caption").getValue(String.class);
+                System.out.println(imageURLDisplay1);
+
             }
 
             @Override
@@ -113,11 +118,18 @@ public class costumerUI extends AppCompatActivity {
 
             }
         });
+        //Data Declaration
 
 
+        Refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println(imageURLDisplay1 + "TESTTTT");
+                Glide.with(costumerUI.this).load(imageURLDisplay1).into(firstMenu);
+            }
+        });
         //Costumer Display
-        System.out.println(imageURLDisplay1 + "TESTTTT");
-        Glide.with(this).load(imageURLDisplay1).into(firstMenu);
+        
 //        Glide.with(this).load(imageURLDisplay2).into(secondMenu);
 //        Glide.with(this).load(imageURLDisplay3).into(thirdMenu);
 //        Glide.with(this).load(imageURLDisplay4).into(fourthMenu);
@@ -136,15 +148,16 @@ public class costumerUI extends AppCompatActivity {
         firstMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                String[] imageURL = {""};
+
                 databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                             Price = snapshot.child("1").child("price").getValue(String.class);
-                            imageURL[0] = snapshot.child("1").child("imageURL").getValue(String.class);
+                            imageURL = snapshot.child("1").child("imageURL").getValue(String.class);
+                            System.out.println(imageURL);
                             Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                             intent.putExtra("priceo",Price);
-                            intent.putExtra("imageo", imageURL[0]);
+                            intent.putExtra("imageo", imageURL);
                             startActivity(intent);
                     }
 
@@ -166,10 +179,10 @@ public class costumerUI extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         Price = snapshot.child("2").child("price").getValue(String.class);
-                        imageURL[0] = snapshot.child("2").child("imageURL").getValue(String.class);
+                        imageURL = snapshot.child("2").child("imageURL").getValue(String.class);
                         Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                         intent.putExtra("priceo",Price);
-                        intent.putExtra("imageo", imageURL[0]);
+                        intent.putExtra("imageo", imageURL);
                         startActivity(intent);
                     }
 
@@ -191,10 +204,10 @@ public class costumerUI extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     Price = snapshot.child("3").child("price").getValue(String.class);
-                    imageURL[0] = snapshot.child("3").child("imageURL").getValue(String.class);
+                    imageURL = snapshot.child("3").child("imageURL").getValue(String.class);
                     Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                     intent.putExtra("priceo",Price);
-                    intent.putExtra("imageo", imageURL[0]);
+                    intent.putExtra("imageo", imageURL);
                     startActivity(intent);
                 }
 
@@ -216,10 +229,10 @@ public class costumerUI extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         Price = snapshot.child("4").child("price").getValue(String.class);
-                        imageURL[0] = snapshot.child("4").child("imageURL").getValue(String.class);
+                        //imageURL[0] = snapshot.child("4").child("imageURL").getValue(String.class);
                         Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                         intent.putExtra("priceo", Price);
-                        intent.putExtra("imageo", imageURL[0]);
+                        //intent.putExtra("imageo", imageURL[0]);
                         startActivity(intent);
                     }
 
@@ -241,10 +254,10 @@ public class costumerUI extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         Price = snapshot.child("5").child("price").getValue(String.class);
-                        imageURL[0] = snapshot.child("5").child("imageURL").getValue(String.class);
+                        //imageURL[0] = snapshot.child("5").child("imageURL").getValue(String.class);
                         Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                         intent.putExtra("priceo", Price);
-                        intent.putExtra("imageo", imageURL[0]);
+                        //intent.putExtra("imageo", imageURL[0]);
                         startActivity(intent);
                     }
 
@@ -266,10 +279,10 @@ public class costumerUI extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     Price = snapshot.child("6").child("price").getValue(String.class);
-                    imageURL[0] = snapshot.child("6").child("imageURL").getValue(String.class);
+                    //imageURL[0] = snapshot.child("6").child("imageURL").getValue(String.class);
                     Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                     intent.putExtra("priceo", Price);
-                    intent.putExtra("imageo", imageURL[0]);
+                    //intent.putExtra("imageo", imageURL[0]);
                     startActivity(intent);
                 }
 

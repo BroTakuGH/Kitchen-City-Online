@@ -34,7 +34,7 @@ public class order extends AppCompatActivity {
     private int order1;
 
 
-    public int totalPrice;
+    public float totalPrice;
 
     private CheckBox checkBoxVisibilityExtraRice;
     private CheckBox checkBoxVisibilityRoyal;
@@ -143,7 +143,7 @@ public class order extends AppCompatActivity {
         public void onClick(View v) {
 
 
-            totalPrice += Float.parseFloat(price);
+            totalPrice += Float.valueOf(price);
 
             orderItem.SetPrice(totalPrice);
             System.out.println(orderItem.GetPrice());
@@ -152,7 +152,7 @@ public class order extends AppCompatActivity {
         }
 
     });
-    Glide.with(this).load(getIntent().getStringExtra("imageo")){
+    Glide.with(this).load(getIntent().getStringExtra("imageo"))
             .into(itemView);
     priceView.setText(price);
 
