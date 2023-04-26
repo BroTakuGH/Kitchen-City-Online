@@ -1,22 +1,27 @@
 package com.example.finals;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
 public class costumerUI extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
+    BottomNavigationView nav;
 
 
     @Override
@@ -29,6 +34,32 @@ public class costumerUI extends AppCompatActivity {
 
 
         setContentView(R.layout.costumerui);
+
+        setContentView(R.layout.costumerui);
+        nav = findViewById(R.id.nav_bar);
+
+        nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                    switch (item.getItemId()){
+
+                        case R.id.shoppingCart:
+                            Intent intent=new Intent(costumerUI.this,cart.class);
+                            startActivity(intent);
+                            break;
+
+                        case R.id.logout:
+                            Intent intent2=new Intent(costumerUI.this,MainActivity2.class);
+                            startActivity(intent2);
+                            break;
+
+                    }
+
+                return false;
+            }
+        });
+
 
         ImageView firstMenu = findViewById(R.id.firstMenu);
         ImageView secondMenu = findViewById(R.id.secondMenu);
