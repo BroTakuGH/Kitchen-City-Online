@@ -66,8 +66,6 @@ public class MainActivity2 extends AppCompatActivity {
                                    Toast.makeText(MainActivity2.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
                                    Intent intent=new Intent(MainActivity2.this,costumerUI.class);
                                    startActivity(intent);
-
-                                   OrderManager.GetInstance().username = id;
                                }else{
                                    Toast.makeText(MainActivity2.this, "Invalid SchoolID and/or Password", Toast.LENGTH_SHORT).show();
                                }

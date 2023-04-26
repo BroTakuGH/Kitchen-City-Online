@@ -34,7 +34,7 @@ public class order extends AppCompatActivity {
     private int order1;
 
 
-    public float totalPrice;
+    public int totalPrice;
 
     private CheckBox checkBoxVisibilityExtraRice;
     private CheckBox checkBoxVisibilityRoyal;
@@ -143,7 +143,7 @@ public class order extends AppCompatActivity {
         public void onClick(View v) {
 
 
-            totalPrice += Float.valueOf(price);
+            totalPrice += Float.parseFloat(price);
 
             orderItem.SetPrice(totalPrice);
             System.out.println(orderItem.GetPrice());
