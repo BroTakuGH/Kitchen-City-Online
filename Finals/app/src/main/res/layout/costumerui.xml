@@ -741,6 +741,7 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/menu_bar"
         android:background="@drawable/shape"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/nav_bar"/>
 
 </RelativeLayout>

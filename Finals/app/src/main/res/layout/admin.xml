@@ -8,7 +8,6 @@
     android:background="#181D2D"
     tools:context=".adminui">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -635,5 +634,9 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/shape"
         app:menu="@menu/menu_bar" />
+        app:menu="@menu/menu_bar4"
+        android:background="@drawable/shape"
+        android:layout_height="wrap_content"
+        android:id="@+id/nav_bar4"/>
 
 </RelativeLayout>

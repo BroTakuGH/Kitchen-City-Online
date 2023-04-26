@@ -5,9 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class adminui extends AppCompatActivity {
     TextView itemEdit1;
@@ -17,6 +26,9 @@ public class adminui extends AppCompatActivity {
     TextView itemEdit5;
     TextView itemEdit6;
     String id;
+
+    BottomNavigationView nav4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,5 +105,29 @@ public class adminui extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        nav4 = findViewById(R.id.nav_bar4);
+
+        nav4.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+
+                    case R.id.shoppingCart:
+                        Intent intent=new Intent(adminui.this,pendingOrders.class);
+                        startActivity(intent);
+                        break;
+
+                    case R.id.logout:
+                        Intent intent2=new Intent(adminui.this,MainActivity2.class);
+                        startActivity(intent2);
+                        break;
+
+                }
+                return false;
+            }
+        });
+
+
     }
 }
