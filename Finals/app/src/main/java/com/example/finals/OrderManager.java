@@ -11,5 +11,5 @@ public class OrderManager extends OrderItem {
     public float GetPrice(){
         return totalPrice;
     }
-
+    
 }

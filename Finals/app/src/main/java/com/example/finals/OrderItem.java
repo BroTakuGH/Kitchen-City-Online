@@ -1,5 +1,7 @@
 package com.example.finals;
 
+import android.content.Intent;
+
 public class OrderItem extends order{
     float totalPrice;
 
@@ -10,4 +12,7 @@ public class OrderItem extends order{
     public float GetPrice(){
         return totalPrice;
     }
+
+
+
 }
