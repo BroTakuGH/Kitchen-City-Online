@@ -13,7 +13,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+//import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -34,7 +34,7 @@ public class order extends AppCompatActivity {
     private int order1;
 
 
-    public int totalPrice;
+    public float totalPrice;
 
     private CheckBox checkBoxVisibilityExtraRice;
     private CheckBox checkBoxVisibilityRoyal;
@@ -44,6 +44,7 @@ public class order extends AppCompatActivity {
     Button button;
 
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,32 +65,30 @@ public class order extends AppCompatActivity {
 //        boolean cokeIsChecked = checkBoxVisibilityCoke.isChecked();
 //        boolean spriteIsCheck = checkBoxVisibilitySprite.isChecked();
 
-            checkBoxVisibilityExtraRice.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (compoundButton.isChecked()){
+        checkBoxVisibilityExtraRice.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (compoundButton.isChecked()) {
                     extraRice += 1;
                     totalPrice += 15;
                     System.out.println("Extra Rice:" + extraRice);
-                }
-                else {
+                } else {
                     extraRice = 0;
                     totalPrice -= 15;
                     System.out.println("Extra Rice:" + extraRice);
                 }
-                }
-            });
+            }
+        });
         checkBoxVisibilityRoyal.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (compoundButton.isChecked()){
+                if (compoundButton.isChecked()) {
                     royal += 1;
                     totalPrice += 15;
                     System.out.println("Royal:" + royal);
                     checkBoxVisibilityCoke.setChecked(false);
                     checkBoxVisibilitySprite.setChecked(false);
-                }
-                else {
+                } else {
                     royal = 0;
                     totalPrice -= 15;
                     System.out.println("Royal" + royal);
@@ -99,14 +98,13 @@ public class order extends AppCompatActivity {
         checkBoxVisibilityCoke.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (compoundButton.isChecked()){
+                if (compoundButton.isChecked()) {
                     coke += 1;
                     totalPrice += 15;
                     System.out.println("Coke:" + coke);
                     checkBoxVisibilityRoyal.setChecked(false);
                     checkBoxVisibilitySprite.setChecked(false);
-                }
-                else {
+                } else {
                     coke = 0;
                     totalPrice -= 15;
                     System.out.println("coke:" + coke);
@@ -116,14 +114,13 @@ public class order extends AppCompatActivity {
         checkBoxVisibilitySprite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (compoundButton.isChecked()){
+                if (compoundButton.isChecked()) {
                     sprite += 1;
                     totalPrice += 15;
                     System.out.println("sprite:" + sprite);
                     checkBoxVisibilityCoke.setChecked(false);
                     checkBoxVisibilityRoyal.setChecked(false);
-                }
-                else {
+                } else {
                     totalPrice -= 15;
                     sprite = 0;
                     System.out.println("sprite:" + sprite);
@@ -132,31 +129,32 @@ public class order extends AppCompatActivity {
         });
 
 
-   itemView =  findViewById(R.id.ItemView);
-   priceView = findViewById(R.id.PriceView);
-    price = (getIntent().getStringExtra("priceo"));
+        itemView = findViewById(R.id.ItemView);
+        priceView = findViewById(R.id.PriceView);
+        price = (getIntent().getStringExtra("priceo"));
 
-    button = findViewById(R.id.addToCartButton);
-    caption = findViewById(R.id.caption);
-    button.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+        button = findViewById(R.id.addToCartButton);
+        caption = findViewById(R.id.caption);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
 
-            totalPrice += Float.parseFloat(price);
+                totalPrice += Float.parseFloat(price);
 
-            orderItem.SetPrice(totalPrice);
-            System.out.println(orderItem.GetPrice());
-            caption.setText(String.valueOf(orderItem.GetPrice()));
+                orderItem.SetPrice(totalPrice);
+                System.out.println(orderItem.GetPrice());
+                caption.setText(String.valueOf(orderItem.GetPrice()));
 
-        }
+            }
 
-    });
-    Glide.with(this).load(getIntent().getStringExtra("imageo"))
-            .into(itemView);
-    priceView.setText(price);
-
+        });
+//    Glide.with(this).load(getIntent().getStringExtra("imageo"))
+//            .into(itemView);
+//    priceView.setText(price);
+//
+//
+//    }
 
     }
-
 }
