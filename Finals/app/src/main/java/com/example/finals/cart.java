@@ -29,6 +29,9 @@ public class cart extends AppCompatActivity {
 
 
     ListView listView;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +62,7 @@ public class cart extends AppCompatActivity {
         });
 
         Button button = findViewById(R.id.payOrder);
+
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -66,11 +70,17 @@ public class cart extends AppCompatActivity {
 
                 String orderss = "";
                 String ha[];
-                List<String> your_array_list = new ArrayList<String>();
+//                List<String> your_array_list = new ArrayList<String>();
+                String array[] = {"burat","burat2"};
 
                  listView = (ListView) findViewById(R.id.resultsListView);
+
+                List<String> your_array = new ArrayList<String>();
+                for (OrderItem item : OrderManager.GetInstance().orders) {
+                    your_array.add(item.mealName);
+                }
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                        (cart.this, R.layout.activity_list_view,R.id.listviewtext, );
+                        (cart.this, R.layout.activity_list_view,R.id.listviewtext, your_array);
                 listView.setAdapter(arrayAdapter);
 //                HashMap<String, String> nameAddresses = new HashMap<>();
 //                nameAddresses.put("lmFAO", "lmfao");
