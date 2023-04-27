@@ -14,12 +14,11 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
-import java.util.Objects;
 
 public class order extends AppCompatActivity {
     private ImageView itemView;
@@ -36,7 +35,7 @@ public class order extends AppCompatActivity {
 
 
     private int order1;
-
+    String Caption;
 
     public float totalPrice;
 
@@ -57,7 +56,7 @@ public class order extends AppCompatActivity {
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         //Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
+        Caption =(getIntent().getStringExtra("captiono"));
 
         checkBoxVisibilityExtraRice = findViewById(R.id.extraRiceCheckbox);
         checkBoxVisibilityRoyal = findViewById(R.id.royalCheckBox);
@@ -181,9 +180,11 @@ public class order extends AppCompatActivity {
 
 
         });
+
         Glide.with(this).load(getIntent().getStringExtra("imageo"))
                 .into(itemView);
         priceView.setText(price);
+        caption.setText(Caption);
 
 
     }
