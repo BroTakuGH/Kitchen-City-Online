@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,9 @@ public class order extends AppCompatActivity {
     private int royal;
     private int coke;
     private int sprite;
+
+    private String drinks;
+    private String extraRice1;
 
 
     private int order1;
@@ -72,10 +76,12 @@ public class order extends AppCompatActivity {
                     extraRice += 1;
                     totalPrice += 15;
                     System.out.println("Extra Rice:" + extraRice);
+                    extraRice1 = "Extra Rice +1";
                 } else {
                     extraRice = 0;
                     totalPrice -= 15;
                     System.out.println("Extra Rice:" + extraRice);
+                    extraRice1 = "No Extra Rice";
                 }
             }
         });
@@ -88,10 +94,12 @@ public class order extends AppCompatActivity {
                     System.out.println("Royal:" + royal);
                     checkBoxVisibilityCoke.setChecked(false);
                     checkBoxVisibilitySprite.setChecked(false);
+                    drinks = "Royal +1";
                 } else {
                     royal = 0;
                     totalPrice -= 15;
                     System.out.println("Royal" + royal);
+                    drinks = "No Drinks";
                 }
             }
         });
@@ -104,10 +112,12 @@ public class order extends AppCompatActivity {
                     System.out.println("Coke:" + coke);
                     checkBoxVisibilityRoyal.setChecked(false);
                     checkBoxVisibilitySprite.setChecked(false);
+                    drinks = "Coke +1";
                 } else {
                     coke = 0;
                     totalPrice -= 15;
                     System.out.println("coke:" + coke);
+                    drinks = "No Drinks";
                 }
             }
         });
@@ -120,10 +130,12 @@ public class order extends AppCompatActivity {
                     System.out.println("sprite:" + sprite);
                     checkBoxVisibilityCoke.setChecked(false);
                     checkBoxVisibilityRoyal.setChecked(false);
+                    drinks = "Sprite +1";
                 } else {
                     totalPrice -= 15;
                     sprite = 0;
                     System.out.println("sprite:" + sprite);
+                    drinks = "No Drinks";
                 }
             }
         });
@@ -152,6 +164,9 @@ public class order extends AppCompatActivity {
                 OrderManager.GetInstance().totalPrice += totalPrice;
                 OrderManager.GetInstance().orders.add(captions);
                 OrderManager.GetInstance().listViewContent += captionText;
+                OrderManager.GetInstance().itemPrice = Float.valueOf(price);
+                OrderManager.GetInstance().drinks = drinks;
+                OrderManager.GetInstance().extraRice = extraRice1;
 //            OrderManager.GetInstance().listViewContent = "lol";
                 System.out.println(OrderManager.GetInstance().totalPrice);
                 System.out.println(OrderManager.GetInstance().username);
@@ -160,6 +175,8 @@ public class order extends AppCompatActivity {
                 }
 //            String test = OrderManager.GetInstance().listViewContent;
                 System.out.println(OrderManager.GetInstance().listViewContent);
+                Intent intent = new Intent(order.this, costumerUI.class);
+                startActivity(intent);
             }
 
 

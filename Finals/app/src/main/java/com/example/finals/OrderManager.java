@@ -24,6 +24,8 @@ public class OrderManager {
 
     public String listViewContent;
 
-
+    public float itemPrice;
+    public String drinks;
+    public String extraRice;
 
 }

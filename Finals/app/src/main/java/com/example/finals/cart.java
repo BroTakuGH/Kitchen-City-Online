@@ -77,7 +77,9 @@ public class cart extends AppCompatActivity {
 
                 List<String> your_array = new ArrayList<String>();
                 for (OrderItem item : OrderManager.GetInstance().orders) {
-                    your_array.add(item.mealName);
+                    your_array.add(item.mealName + " ₱" + OrderManager.GetInstance().itemPrice + "\n" +
+                            OrderManager.GetInstance().extraRice + "\n" + OrderManager.GetInstance().drinks +
+                            "\n" + "==========");
                 }
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
                         (cart.this, R.layout.activity_list_view,R.id.listviewtext, your_array);
