@@ -112,6 +112,21 @@ public class adminui extends AppCompatActivity {
                 itemPrice4 = snapshot.child("4").child("price").getValue(String.class);
                 itemPrice5 = snapshot.child("5").child("price").getValue(String.class);
                 itemPrice6 = snapshot.child("6").child("price").getValue(String.class);
+
+
+                item1Name.setText(itemName1);
+                item2Name.setText(itemName2);
+                item3Name.setText(itemName3);
+                item4Name.setText(itemName4);
+                item5Name.setText(itemName5);
+                item6Name.setText(itemName6);
+
+                item1Price.setText("₱"+itemPrice1);
+                item2Price.setText("₱"+itemPrice2);
+                item3Price.setText("₱"+itemPrice3);
+                item4Price.setText("₱"+itemPrice4);
+                item5Price.setText("₱"+itemPrice5);
+                item6Price.setText("₱"+itemPrice6);
             }
 
             @Override

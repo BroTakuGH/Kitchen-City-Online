@@ -138,7 +138,27 @@ public class costumerUI extends AppCompatActivity {
                 PriceDisplay6 = snapshot.child("6").child("price").getValue(String.class);
                 imageURLDisplay6 = snapshot.child("6").child("imageURL").getValue(String.class);
                 CaptionDisplay6 = snapshot.child("6").child("caption").getValue(String.class);
-                System.out.println(imageURLDisplay1);
+
+                Glide.with(costumerUI.this).load(imageURLDisplay1).into(firstMenu);
+                Glide.with(costumerUI.this).load(imageURLDisplay2).into(secondMenu);
+                Glide.with(costumerUI.this).load(imageURLDisplay3).into(thirdMenu);
+                Glide.with(costumerUI.this).load(imageURLDisplay4).into(fourthMenu);
+                Glide.with(costumerUI.this).load(imageURLDisplay5).into(fifthMenu);
+                Glide.with(costumerUI.this).load(imageURLDisplay6).into(sixthMenu);
+
+                firstPrice.setText(PriceDisplay1);
+                secondPrice.setText(PriceDisplay2);
+                thirdPrice.setText(PriceDisplay3);
+                forthPrice.setText(PriceDisplay4);
+                fifthPrice.setText(PriceDisplay5);
+                sixthPrice.setText(PriceDisplay6);
+
+                caption1.setText(CaptionDisplay1);
+                caption2.setText(CaptionDisplay2);
+                caption3.setText(CaptionDisplay3);
+                caption4.setText(CaptionDisplay4);
+                caption5.setText(CaptionDisplay5);
+                caption6.setText(CaptionDisplay6);
 
             }
 
@@ -153,7 +173,7 @@ public class costumerUI extends AppCompatActivity {
         Refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println(PriceDisplay1);
+
                 Glide.with(costumerUI.this).load(imageURLDisplay1).into(firstMenu);
                 Glide.with(costumerUI.this).load(imageURLDisplay2).into(secondMenu);
                 Glide.with(costumerUI.this).load(imageURLDisplay3).into(thirdMenu);
@@ -220,7 +240,7 @@ public class costumerUI extends AppCompatActivity {
                         Price = snapshot.child("2").child("price").getValue(String.class);
                         imageURL = snapshot.child("2").child("imageURL").getValue(String.class);
                         Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
-                        intent.putExtra("captiono",PriceDisplay2);
+                        intent.putExtra("captiono",CaptionDisplay2);
                         intent.putExtra("priceo",Price);
                         intent.putExtra("imageo", imageURL);
                         startActivity(intent);
