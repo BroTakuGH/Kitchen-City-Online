@@ -35,6 +35,7 @@ public class pendingOrders extends AppCompatActivity {
     String Drinks;
     String Drinks1;
 
+
     String OrderID;
     String OrderID2;
     ListView listView;
@@ -48,6 +49,7 @@ public class pendingOrders extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.AdminList1);
         nav3 = findViewById(R.id.nav_bar3);
 
+        List<String> your_array = new ArrayList<String>();
         databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -64,17 +66,13 @@ public class pendingOrders extends AppCompatActivity {
                 Drinks1 = snapshot.child("2021sha01129").child("drinks").getValue(String.class);
 
                 //String NewRice = Extra_Rice.toString;
-                List<String> your_array = new ArrayList<String>();
                 your_array.add("Order Number: "+OrderID+"\n"+UserName+"\n"+Orders+"\n"+"Extra Rice: "+Extra_Rice+"\n"+Drinks);
                 your_array.add("Order Number: "+OrderID2+"\n"+UserName1+"\n"+Orders1+"\n"+"Extra Rice: "+Extra_Rice1+"\n"+Drinks1);
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
                         (pendingOrders.this, R.layout.adminlistviewdisplay,R.id.Adminlistdisplay, your_array);
                 listView.setAdapter(arrayAdapter);
 
-//                public void RemoveItem(int remove){
-//                    your_array.remove(remove);
-//                    arrayAdapter.notifyDataSetChanged();
-//                }
+
 
             }
 
@@ -84,6 +82,17 @@ public class pendingOrders extends AppCompatActivity {
             }
         });
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
+                String selectedItem = (String) adapterView.getItemAtPosition(index);
+                your_array.remove(index);
+                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
+                        (pendingOrders.this, R.layout.adminlistviewdisplay,R.id.Adminlistdisplay, your_array);
+                listView.setAdapter(arrayAdapter);
+            }
+        });
 
 //listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //    @Override
@@ -92,9 +101,7 @@ public class pendingOrders extends AppCompatActivity {
 //    }
 //});
 
-//public void RemoveItem(int remove){
-//            your_array.remove
-//        }
+
 
 
         nav3.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
