@@ -20,6 +20,8 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class order extends AppCompatActivity {
     private ImageView itemView;
     TextView caption;
@@ -31,7 +33,7 @@ public class order extends AppCompatActivity {
     private int sprite;
 
     private String drinks;
-    private String extraRice1;
+    private String extraRice1 = "No Extra Rice";
 
 
     private int order1;
@@ -43,7 +45,7 @@ public class order extends AppCompatActivity {
     private CheckBox checkBoxVisibilityRoyal;
     private CheckBox checkBoxVisibilityCoke;
     private CheckBox checkBoxVisibilitySprite;
-
+    private ArrayList<SubItem> selectedSubItems = new ArrayList<SubItem>();
     Button button;
 
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
@@ -82,6 +84,8 @@ public class order extends AppCompatActivity {
                     System.out.println("Extra Rice:" + extraRice);
                     extraRice1 = "No Extra Rice";
                 }
+
+
             }
         });
         checkBoxVisibilityRoyal.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -139,7 +143,6 @@ public class order extends AppCompatActivity {
             }
         });
 
-
         itemView = findViewById(R.id.ItemView);
         priceView = findViewById(R.id.PriceView);
         price = (getIntent().getStringExtra("priceo"));
@@ -149,6 +152,19 @@ public class order extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // check combo boxes
+                if (checkBoxVisibilityCoke.isChecked()) {
+                    SubItem sub = new SubItem("Coke", extraRice1);
+                    selectedSubItems.add(sub);
+                }
+                if (checkBoxVisibilityRoyal.isChecked()) {
+                    SubItem sub = new SubItem("Royal", extraRice1);
+                    selectedSubItems.add(sub);
+                }
+                if (checkBoxVisibilitySprite.isChecked()) {
+                    SubItem sub = new SubItem("Sprite", extraRice1);
+                    selectedSubItems.add(sub);
+                }
 
 
 //            String captionText = caption.getText().toString();
@@ -161,14 +177,19 @@ public class order extends AppCompatActivity {
                 String captionText = caption.getText().toString();
                 String itemPrice = priceView.getText().toString();
                 float itemPrice2 = Float.parseFloat(itemPrice);
-                OrderItem captions = new OrderItem(captionText);
-                OrderItem itemPrice3 = new OrderItem(itemPrice2);
-                OrderManager.GetInstance().totalPrice += totalPrice;
-                OrderManager.GetInstance().orders.add(captions);
-                OrderManager.GetInstance().listViewContent += captionText;
-                OrderManager.GetInstance().itemPrice.add(itemPrice3);
-                OrderManager.GetInstance().drinks = drinks;
-                OrderManager.GetInstance().extraRice = extraRice1;
+
+                OrderItem order = new OrderItem(captionText, itemPrice2);
+                order.subitems = selectedSubItems;
+
+                OrderManager.GetInstance().orders.add(order);
+                OrderManager.GetInstance().extraRice += extraRice;
+                OrderManager.GetInstance().extraRiceDisplay = extraRice1;
+//                OrderManager.GetInstance().totalPrice += totalPrice;
+//                OrderManager.GetInstance().orders.add(captions);
+//                OrderManager.GetInstance().listViewContent += captionText;
+//                OrderManager.GetInstance().itemPrice.add(itemPrice3);
+//                OrderManager.GetInstance().drinks = drinks;
+//                OrderManager.GetInstance().extraRice = extraRice1;
 //            OrderManager.GetInstance().listViewContent = "lol";
                 System.out.println(OrderManager.GetInstance().totalPrice);
                 System.out.println(OrderManager.GetInstance().username);
