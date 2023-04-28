@@ -1,11 +1,14 @@
 package com.example.finals;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-
+import android.app.AlertDialog;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ListView;
@@ -31,6 +34,9 @@ public class pendingOrders extends AppCompatActivity {
     int Extra_Rice1;
     String Drinks;
     String Drinks1;
+
+    String OrderID;
+    String OrderID2;
     ListView listView;
     BottomNavigationView nav3;
 
@@ -45,11 +51,13 @@ public class pendingOrders extends AppCompatActivity {
         databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                OrderID = snapshot.child("2021sha01116").child("ID NUMBER").getValue(String.class);
                 UserName = snapshot.child("2021sha01116").child("UserName").getValue(String.class);
                 Orders = snapshot.child("2021sha01116").child("orders").getValue(String.class);
                 Extra_Rice = snapshot.child("2021sha01116").child("extraRice").getValue(int.class);
                 Drinks = snapshot.child("2021sha01116").child("drinks").getValue(String.class);
 
+                OrderID2 = snapshot.child("2021sha01129").child("ID NUMBER").getValue(String.class);
                 UserName1 = snapshot.child("2021sha01129").child("UserName").getValue(String.class);
                 Orders1 = snapshot.child("2021sha01129").child("orders").getValue(String.class);
                 Extra_Rice1 = snapshot.child("2021sha01129").child("extraRice").getValue(int.class);
@@ -57,11 +65,17 @@ public class pendingOrders extends AppCompatActivity {
 
                 //String NewRice = Extra_Rice.toString;
                 List<String> your_array = new ArrayList<String>();
-                your_array.add(UserName+"\n"+Orders+"\n"+"Extra Rice:"+Extra_Rice+"\n"+Drinks);
-
+                your_array.add("Order Number: "+OrderID+"\n"+UserName+"\n"+Orders+"\n"+"Extra Rice: "+Extra_Rice+"\n"+Drinks);
+                your_array.add("Order Number: "+OrderID2+"\n"+UserName1+"\n"+Orders1+"\n"+"Extra Rice: "+Extra_Rice1+"\n"+Drinks1);
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
                         (pendingOrders.this, R.layout.adminlistviewdisplay,R.id.Adminlistdisplay, your_array);
                 listView.setAdapter(arrayAdapter);
+
+                public void RemoveItem(int remove){
+                    your_array.remove(remove);
+                    arrayAdapter.notifyDataSetChanged();
+                }
+
             }
 
             @Override
@@ -71,20 +85,16 @@ public class pendingOrders extends AppCompatActivity {
         });
 
 
+//listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//    @Override
+//    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//        yourarray.remove(i)
+//    }
+//});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+public void RemoveItem(int remove){
+            your_array.remove
+        }
 
 
         nav3.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

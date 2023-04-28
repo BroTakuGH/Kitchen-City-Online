@@ -21,6 +21,12 @@
             android:fontFamily="sans-serif-black"
             android:textColor="@color/white"/>
 
+        <Button
+            android:id="@+id/AdminRefresh2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refresh" />
+
         <ListView
             android:id="@+id/AdminList1"
             android:layout_width="match_parent"
