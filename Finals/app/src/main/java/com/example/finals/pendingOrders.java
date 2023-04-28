@@ -71,10 +71,10 @@ public class pendingOrders extends AppCompatActivity {
                         (pendingOrders.this, R.layout.adminlistviewdisplay,R.id.Adminlistdisplay, your_array);
                 listView.setAdapter(arrayAdapter);
 
-                public void RemoveItem(int remove){
-                    your_array.remove(remove);
-                    arrayAdapter.notifyDataSetChanged();
-                }
+//                public void RemoveItem(int remove){
+//                    your_array.remove(remove);
+//                    arrayAdapter.notifyDataSetChanged();
+//                }
 
             }
 
@@ -92,9 +92,9 @@ public class pendingOrders extends AppCompatActivity {
 //    }
 //});
 
-public void RemoveItem(int remove){
-            your_array.remove
-        }
+//public void RemoveItem(int remove){
+//            your_array.remove
+//        }
 
 
         nav3.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
