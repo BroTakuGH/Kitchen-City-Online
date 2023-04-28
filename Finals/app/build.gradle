@@ -24,7 +24,13 @@ android {
         }
     }
 
+    task wrapper(type: Wrapper){
+        gradleVersion = '7.2'
+    }
 
+    task prepareKotlinBuildScriptModel {
+
+    }
 
     buildFeatures{
 
@@ -58,4 +64,5 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
 }

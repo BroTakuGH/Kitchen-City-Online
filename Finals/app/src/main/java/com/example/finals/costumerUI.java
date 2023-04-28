@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -53,6 +54,9 @@ public class costumerUI extends AppCompatActivity {
     String CaptionDisplay5;
     String CaptionDisplay6;
     Button Refresh;
+
+    SwipeRefreshLayout swipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +71,7 @@ public class costumerUI extends AppCompatActivity {
 
         setContentView(R.layout.costumerui);
         nav = findViewById(R.id.nav_bar);
+
 
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -110,8 +115,7 @@ public class costumerUI extends AppCompatActivity {
         TextView caption4 =  findViewById(R.id.forthCaption);
         TextView caption5 =  findViewById(R.id.fifthCaption);
         TextView caption6 =  findViewById(R.id.sixthCaption);
-        Refresh = findViewById(R.id.RefreshTest);
-
+        
         databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -169,11 +173,10 @@ public class costumerUI extends AppCompatActivity {
         });
         //Data Declaration
 
-
-        Refresh.setOnClickListener(new View.OnClickListener() {
+        swipeRefreshLayout = findViewById(R.id.swipeRefresh);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
-            public void onClick(View view) {
-
+            public void onRefresh() {
                 Glide.with(costumerUI.this).load(imageURLDisplay1).into(firstMenu);
                 Glide.with(costumerUI.this).load(imageURLDisplay2).into(secondMenu);
                 Glide.with(costumerUI.this).load(imageURLDisplay3).into(thirdMenu);
@@ -194,9 +197,37 @@ public class costumerUI extends AppCompatActivity {
                 caption4.setText(CaptionDisplay4);
                 caption5.setText(CaptionDisplay5);
                 caption6.setText(CaptionDisplay6);
-
+                swipeRefreshLayout.setRefreshing(false);
             }
         });
+
+//        Refresh.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Glide.with(costumerUI.this).load(imageURLDisplay1).into(firstMenu);
+//                Glide.with(costumerUI.this).load(imageURLDisplay2).into(secondMenu);
+//                Glide.with(costumerUI.this).load(imageURLDisplay3).into(thirdMenu);
+//                Glide.with(costumerUI.this).load(imageURLDisplay4).into(fourthMenu);
+//                Glide.with(costumerUI.this).load(imageURLDisplay5).into(fifthMenu);
+//                Glide.with(costumerUI.this).load(imageURLDisplay6).into(sixthMenu);
+//
+//                firstPrice.setText(PriceDisplay1);
+//                secondPrice.setText(PriceDisplay2);
+//                thirdPrice.setText(PriceDisplay3);
+//                forthPrice.setText(PriceDisplay4);
+//                fifthPrice.setText(PriceDisplay5);
+//                sixthPrice.setText(PriceDisplay6);
+//
+//                caption1.setText(CaptionDisplay1);
+//                caption2.setText(CaptionDisplay2);
+//                caption3.setText(CaptionDisplay3);
+//                caption4.setText(CaptionDisplay4);
+//                caption5.setText(CaptionDisplay5);
+//                caption6.setText(CaptionDisplay6);
+//
+//            }
+//        });
 
 
 
