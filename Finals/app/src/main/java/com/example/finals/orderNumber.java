@@ -21,7 +21,7 @@ public class orderNumber extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(orderNumber.this,MainActivity.class);
+                Intent intent=new Intent(orderNumber.this,costumerUI.class);
                 startActivity(intent);
             }
         });

@@ -52,6 +52,8 @@ public class MainActivity2 extends AppCompatActivity {
                 String id = id_input.getText().toString();
                 String pass = password_input.getText().toString();
 
+                String adminid = "Admin.admin";
+                String adminpass = "Admin.pass";
                 if(id.isEmpty()||pass.isEmpty()){
                     Toast.makeText(MainActivity2.this, "Please Enter Your ID/Password", Toast.LENGTH_SHORT).show();
                 }else{
@@ -59,22 +61,32 @@ public class MainActivity2 extends AppCompatActivity {
                     databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(snapshot.hasChild(id)){
-                               final String getPassword = snapshot.child(id).child("Password").getValue(String.class);
+                            if(id.equals(adminid)){
+                                if(pass.equals(adminpass)){
+                                    Toast.makeText(MainActivity2.this, "Welcome Admin", Toast.LENGTH_SHORT).show();
+                                    Intent intent=new Intent(MainActivity2.this,adminui.class);
+                                    startActivity(intent);
+                                }else{
+                                    Toast.makeText(MainActivity2.this, "Invalid SchoolID and/or Password", Toast.LENGTH_SHORT).show();
+                                }
+                            }else {
+                                if (snapshot.hasChild(id)) {
+                                    final String getPassword = snapshot.child(id).child("Password").getValue(String.class);
 
-                               if(getPassword.equals(pass)){
-                                   Toast.makeText(MainActivity2.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
-                                   Intent intent=new Intent(MainActivity2.this,costumerUI.class);
-                                   startActivity(intent);
+                                    if (getPassword.equals(pass)) {
+                                        Toast.makeText(MainActivity2.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(MainActivity2.this, costumerUI.class);
+                                        startActivity(intent);
 
-                                   OrderManager.GetInstance().username = id;
+                                        OrderManager.GetInstance().username = id;
 
-                               }else{
-                                   Toast.makeText(MainActivity2.this, "Invalid SchoolID and/or Password", Toast.LENGTH_SHORT).show();
-                               }
+                                    } else {
+                                        Toast.makeText(MainActivity2.this, "Invalid SchoolID and/or Password", Toast.LENGTH_SHORT).show();
+                                    }
 
-                            }else{
-                                Toast.makeText(MainActivity2.this, "Invalid SchoolID and/or Password", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(MainActivity2.this, "Invalid SchoolID and/or Password", Toast.LENGTH_SHORT).show();
+                                }
                             }
                         }
 
