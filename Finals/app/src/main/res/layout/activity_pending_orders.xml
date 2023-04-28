@@ -7,6 +7,11 @@
     android:background="#181D2D"
     tools:context=".pendingOrders">
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipeRefresh">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,12 +26,6 @@
             android:fontFamily="sans-serif-black"
             android:textColor="@color/white"/>
 
-        <Button
-            android:id="@+id/AdminRefresh2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Refresh" />
-
         <ListView
             android:id="@+id/AdminList1"
             android:layout_width="match_parent"
@@ -36,6 +35,8 @@
             app:cornerRadius="50dp" />
 
     </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

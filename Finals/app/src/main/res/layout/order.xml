@@ -74,7 +74,6 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="6dp"
                 android:text="Bulalo"
-                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -84,16 +83,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:text="₱ 150"
-                android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Warm up your tummy with a hearty bowl of Bulalo! Made with tender beef shanks, veggies, and a flavorful broth, this classic Filipino soup is filling and delicious."
-                android:textSize="14sp" />
+
 
             <CheckBox
                 android:id="@+id/extraRiceCheckbox"
@@ -106,7 +99,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="Drinks"
-                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <CheckBox
@@ -132,7 +124,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="Additional Instructions:"
-                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <EditText

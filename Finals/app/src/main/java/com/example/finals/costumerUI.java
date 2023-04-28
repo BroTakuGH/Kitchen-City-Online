@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -52,7 +53,8 @@ public class costumerUI extends AppCompatActivity {
     String CaptionDisplay4;
     String CaptionDisplay5;
     String CaptionDisplay6;
-    Button Refresh;
+    SwipeRefreshLayout swipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,7 +112,6 @@ public class costumerUI extends AppCompatActivity {
         TextView caption4 =  findViewById(R.id.forthCaption);
         TextView caption5 =  findViewById(R.id.fifthCaption);
         TextView caption6 =  findViewById(R.id.sixthCaption);
-        Refresh = findViewById(R.id.RefreshTest);
 
         databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -170,9 +171,10 @@ public class costumerUI extends AppCompatActivity {
         //Data Declaration
 
 
-        Refresh.setOnClickListener(new View.OnClickListener() {
+        swipeRefreshLayout = findViewById(R.id.swipeRefresh);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
-            public void onClick(View view) {
+            public void onRefresh() {
 
                 Glide.with(costumerUI.this).load(imageURLDisplay1).into(firstMenu);
                 Glide.with(costumerUI.this).load(imageURLDisplay2).into(secondMenu);
@@ -194,6 +196,8 @@ public class costumerUI extends AppCompatActivity {
                 caption4.setText(CaptionDisplay4);
                 caption5.setText(CaptionDisplay5);
                 caption6.setText(CaptionDisplay6);
+
+
 
             }
         });
