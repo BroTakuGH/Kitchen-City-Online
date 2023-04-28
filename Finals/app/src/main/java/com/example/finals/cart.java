@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class cart extends AppCompatActivity {
 
@@ -69,6 +70,7 @@ public class cart extends AppCompatActivity {
             public void onClick(View view) {
 
                 String orderss = "";
+//                String drinks = "";
 //                String ha[];
 //                List<String> your_array_list = new ArrayList<String>();
                 String array[] = {"burat","burat2"};
@@ -78,14 +80,26 @@ public class cart extends AppCompatActivity {
 //                nameAddresses.put("lmFAO", "lmfao");
 
 
-
+                String drinks = "";
                 for (OrderItem item : OrderManager.GetInstance().orders) {
-                    orderss += item.mealName;
+
+                    for (SubItem sub_item : item.subitems) {
+                        drinks += sub_item.subitemName + "+1" + " ";
+                    }
+                    orderss += item.mealName + " ";
+
 
                 }
+                Random random = new Random();
+                int randomNumber = random.nextInt(1000);
+                OrderManager.GetInstance().randomNumber = Integer.toString(randomNumber);
 
-                //databaseReference.child("Users").child(OrderManager.GetInstance().username).child("orders").setValue(orderss);
-
+                databaseReference.child("Users").child(OrderManager.GetInstance().username).child("orders").setValue(orderss);
+                databaseReference.child("Users").child(OrderManager.GetInstance().username).child("drinks").setValue(drinks);
+                databaseReference.child("Users").child(OrderManager.GetInstance().username).child("extraRice").setValue(OrderManager.GetInstance().extraRice);
+                databaseReference.child("Users").child(OrderManager.GetInstance().username).child("ID NUMBER").setValue(OrderManager.GetInstance().randomNumber);
+                Intent intent=new Intent(cart.this,orderNumber.class);
+                startActivity(intent);
             }
         });
 
@@ -93,11 +107,11 @@ public class cart extends AppCompatActivity {
 
         List<String> your_array = new ArrayList<String>();
         for (OrderItem item : OrderManager.GetInstance().orders) {
-            for (OrderItem itemPrice : OrderManager.GetInstance().itemPrice) {
-                your_array.add(item.mealName + " ₱" + itemPrice.itemPrice + "\n" +
-                        OrderManager.GetInstance().extraRice + "\n" + OrderManager.GetInstance().drinks +
-                        "\n" + "==========");
+            String subitemsStr = "";
+            for (SubItem sub_item : item.subitems) {
+                subitemsStr += sub_item.subitemName + "+1";
             }
+            your_array.add(item.mealName + " ₱" + item.itemPrice + "\n" + subitemsStr + "\n" +  OrderManager.GetInstance().extraRiceDisplay);
         }
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>

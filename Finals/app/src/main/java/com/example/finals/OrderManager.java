@@ -25,7 +25,8 @@ public class OrderManager {
     public String listViewContent;
     public ArrayList<OrderItem> itemPrice = new ArrayList<OrderItem>();
 
-    public String drinks;
-    public String extraRice;
+    public String randomNumber;
+    public int extraRice;
+    public String extraRiceDisplay;
 
 }
