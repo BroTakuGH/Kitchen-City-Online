@@ -22,13 +22,14 @@
             android:textColor="@color/white"/>
 
         <ListView
-            android:layout_marginTop="20dp"
+            android:id="@+id/AdminList1"
             android:layout_width="match_parent"
             android:layout_height="450dp"
+            android:layout_marginTop="20dp"
             android:background="@color/white"
-            app:cornerRadius="50dp"/>
+            app:cornerRadius="50dp" />
 
-        </LinearLayout>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

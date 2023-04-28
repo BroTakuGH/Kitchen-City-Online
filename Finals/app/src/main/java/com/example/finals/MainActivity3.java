@@ -83,7 +83,7 @@ private EditText password_input;
                                     databaseReference.child("Users").child(methods.GetSchoolID()).child("Password").setValue(methods.GetPassword());
 
                                     Toast.makeText(MainActivity3.this, "User registered succesfully", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(MainActivity3.this, costumerUI.class);
+                                    Intent intent = new Intent(MainActivity3.this, MainActivity2.class);
                                     startActivity(intent);
                                 }
                             }
