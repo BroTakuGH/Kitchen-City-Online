@@ -78,6 +78,7 @@ public class order extends AppCompatActivity {
                     totalPrice += 15;
                     System.out.println("Extra Rice:" + extraRice);
                     extraRice1 = "Extra Rice +1";
+
                 } else {
                     extraRice = 0;
                     totalPrice -= 15;
@@ -152,6 +153,7 @@ public class order extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // check combo boxes
                 if (checkBoxVisibilityCoke.isChecked()) {
                     SubItem sub = new SubItem("Coke", extraRice1);
@@ -184,14 +186,14 @@ public class order extends AppCompatActivity {
                 OrderManager.GetInstance().orders.add(order);
                 OrderManager.GetInstance().extraRice += extraRice;
                 OrderManager.GetInstance().extraRiceDisplay = extraRice1;
-//                OrderManager.GetInstance().totalPrice += totalPrice;
+                OrderManager.GetInstance().totalPrice += totalPrice;
 //                OrderManager.GetInstance().orders.add(captions);
 //                OrderManager.GetInstance().listViewContent += captionText;
 //                OrderManager.GetInstance().itemPrice.add(itemPrice3);
 //                OrderManager.GetInstance().drinks = drinks;
 //                OrderManager.GetInstance().extraRice = extraRice1;
 //            OrderManager.GetInstance().listViewContent = "lol";
-                System.out.println(OrderManager.GetInstance().totalPrice);
+                System.out.println(OrderManager.GetInstance().totalPrice + "totalprice");
                 System.out.println(OrderManager.GetInstance().username);
                 for (OrderItem item : OrderManager.GetInstance().orders) {
                     System.out.println(item.mealName);
@@ -200,6 +202,7 @@ public class order extends AppCompatActivity {
                 System.out.println(OrderManager.GetInstance().listViewContent);
                 Intent intent = new Intent(order.this, costumerUI.class);
                 startActivity(intent);
+                System.out.println(totalPrice + "totalprice2");
             }
 
 

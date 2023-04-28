@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -27,9 +28,10 @@ public class cart extends AppCompatActivity {
 
     BottomNavigationView nav2;
 
-
+    TextView totalAmount;
 
     ListView listView;
+
 
 
 
@@ -41,6 +43,7 @@ public class cart extends AppCompatActivity {
         nav2 = findViewById(R.id.nav_bar2);
         String costumerOrder [] = {};
         String orders2 = OrderManager.GetInstance().listViewContent;
+
         nav2.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -117,5 +120,9 @@ public class cart extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
                 (cart.this, R.layout.activity_list_view,R.id.listviewtext, your_array);
         listView.setAdapter(arrayAdapter);
+        totalAmount = findViewById(R.id.totalPrice);
+
+
+        totalAmount.setText(String.valueOf(OrderManager.GetInstance().totalPrice));
     }
 }
