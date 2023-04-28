@@ -23,8 +23,8 @@ public class OrderManager {
     public float totalPrice;
 
     public String listViewContent;
+    public ArrayList<OrderItem> itemPrice = new ArrayList<OrderItem>();
 
-    public float itemPrice;
     public String drinks;
     public String extraRice;
 

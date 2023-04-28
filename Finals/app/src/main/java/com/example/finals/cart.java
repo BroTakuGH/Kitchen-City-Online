@@ -69,21 +69,11 @@ public class cart extends AppCompatActivity {
             public void onClick(View view) {
 
                 String orderss = "";
-                String ha[];
+//                String ha[];
 //                List<String> your_array_list = new ArrayList<String>();
                 String array[] = {"burat","burat2"};
 
-                 listView = (ListView) findViewById(R.id.resultsListView);
 
-                List<String> your_array = new ArrayList<String>();
-                for (OrderItem item : OrderManager.GetInstance().orders) {
-                    your_array.add(item.mealName + " ₱" + OrderManager.GetInstance().itemPrice + "\n" +
-                            OrderManager.GetInstance().extraRice + "\n" + OrderManager.GetInstance().drinks +
-                            "\n" + "==========");
-                }
-                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                        (cart.this, R.layout.activity_list_view,R.id.listviewtext, your_array);
-                listView.setAdapter(arrayAdapter);
 //                HashMap<String, String> nameAddresses = new HashMap<>();
 //                nameAddresses.put("lmFAO", "lmfao");
 
@@ -99,6 +89,19 @@ public class cart extends AppCompatActivity {
             }
         });
 
+        listView = (ListView) findViewById(R.id.resultsListView);
 
+        List<String> your_array = new ArrayList<String>();
+        for (OrderItem item : OrderManager.GetInstance().orders) {
+            for (OrderItem itemPrice : OrderManager.GetInstance().itemPrice) {
+                your_array.add(item.mealName + " ₱" + itemPrice.itemPrice + "\n" +
+                        OrderManager.GetInstance().extraRice + "\n" + OrderManager.GetInstance().drinks +
+                        "\n" + "==========");
+            }
+        }
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
+                (cart.this, R.layout.activity_list_view,R.id.listviewtext, your_array);
+        listView.setAdapter(arrayAdapter);
     }
 }

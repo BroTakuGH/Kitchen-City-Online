@@ -159,11 +159,14 @@ public class order extends AppCompatActivity {
 //            caption.setText(String.valueOf(orderItem.GetPrice()));
                 totalPrice += Float.valueOf(price);
                 String captionText = caption.getText().toString();
+                String itemPrice = priceView.getText().toString();
+                float itemPrice2 = Float.parseFloat(itemPrice);
                 OrderItem captions = new OrderItem(captionText);
+                OrderItem itemPrice3 = new OrderItem(itemPrice2);
                 OrderManager.GetInstance().totalPrice += totalPrice;
                 OrderManager.GetInstance().orders.add(captions);
                 OrderManager.GetInstance().listViewContent += captionText;
-                OrderManager.GetInstance().itemPrice = Float.valueOf(price);
+                OrderManager.GetInstance().itemPrice.add(itemPrice3);
                 OrderManager.GetInstance().drinks = drinks;
                 OrderManager.GetInstance().extraRice = extraRice1;
 //            OrderManager.GetInstance().listViewContent = "lol";
