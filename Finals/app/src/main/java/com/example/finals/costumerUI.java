@@ -116,6 +116,7 @@ public class costumerUI extends AppCompatActivity {
         TextView caption5 =  findViewById(R.id.fifthCaption);
         TextView caption6 =  findViewById(R.id.sixthCaption);
         
+
         databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -173,10 +174,12 @@ public class costumerUI extends AppCompatActivity {
         });
         //Data Declaration
 
+
         swipeRefreshLayout = findViewById(R.id.swipeRefresh);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+
                 Glide.with(costumerUI.this).load(imageURLDisplay1).into(firstMenu);
                 Glide.with(costumerUI.this).load(imageURLDisplay2).into(secondMenu);
                 Glide.with(costumerUI.this).load(imageURLDisplay3).into(thirdMenu);
@@ -198,6 +201,9 @@ public class costumerUI extends AppCompatActivity {
                 caption5.setText(CaptionDisplay5);
                 caption6.setText(CaptionDisplay6);
                 swipeRefreshLayout.setRefreshing(false);
+
+
+
             }
         });
 

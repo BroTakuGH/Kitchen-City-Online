@@ -86,6 +86,8 @@
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
+
+
             <CheckBox
                 android:id="@+id/extraRiceCheckbox"
                 android:layout_width="wrap_content"

@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.app.AlertDialog;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.widget.ListView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -41,6 +43,8 @@ public class pendingOrders extends AppCompatActivity {
     ListView listView;
     BottomNavigationView nav3;
 
+    SwipeRefreshLayout swipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,11 +70,7 @@ public class pendingOrders extends AppCompatActivity {
                 Drinks1 = snapshot.child("2021sha01129").child("drinks").getValue(String.class);
 
                 //String NewRice = Extra_Rice.toString;
-                your_array.add("Order Number: "+OrderID+"\n"+UserName+"\n"+Orders+"\n"+"Extra Rice: "+Extra_Rice+"\n"+Drinks);
-                your_array.add("Order Number: "+OrderID2+"\n"+UserName1+"\n"+Orders1+"\n"+"Extra Rice: "+Extra_Rice1+"\n"+Drinks1);
-                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                        (pendingOrders.this, R.layout.adminlistviewdisplay,R.id.Adminlistdisplay, your_array);
-                listView.setAdapter(arrayAdapter);
+
 
 
 
@@ -100,6 +100,20 @@ public class pendingOrders extends AppCompatActivity {
 //        yourarray.remove(i)
 //    }
 //});
+
+        swipeRefreshLayout = findViewById(R.id.swipeRefresh);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+//                your_array.add("Order Number: "+OrderID+"\n"+UserName+"\n"+Orders+"\n"+"Extra Rice: "+Extra_Rice+"\n"+Drinks);
+                your_array.add("Order Number: "+OrderID2+"\n"+UserName1+"\n"+Orders1+"\n"+"Extra Rice: "+Extra_Rice1+"\n"+Drinks1);
+                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
+                        (pendingOrders.this, R.layout.adminlistviewdisplay,R.id.Adminlistdisplay, your_array);
+                listView.setAdapter(arrayAdapter);
+
+            }
+        });
 
 
 
