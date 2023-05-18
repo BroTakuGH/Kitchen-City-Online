@@ -96,11 +96,12 @@ public class cart extends AppCompatActivity {
                 Random random = new Random();
                 int randomNumber = random.nextInt(1000);
                 OrderManager.GetInstance().randomNumber = Integer.toString(randomNumber);
+                databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("user").setValue(OrderManager.GetInstance().username);
+                databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("orders").setValue(orderss);
+                databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("drinks").setValue(drinks);
+                databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("extraRice").setValue(OrderManager.GetInstance().extraRice);
+                databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("orderNumber").setValue(OrderManager.GetInstance().randomNumber);
 
-                databaseReference.child("Users").child(OrderManager.GetInstance().username).child("orders").setValue(orderss);
-                databaseReference.child("Users").child(OrderManager.GetInstance().username).child("drinks").setValue(drinks);
-                databaseReference.child("Users").child(OrderManager.GetInstance().username).child("extraRice").setValue(OrderManager.GetInstance().extraRice);
-                databaseReference.child("Users").child(OrderManager.GetInstance().username).child("ID NUMBER").setValue(OrderManager.GetInstance().randomNumber);
                 Intent intent=new Intent(cart.this,orderNumber.class);
                 startActivity(intent);
             }

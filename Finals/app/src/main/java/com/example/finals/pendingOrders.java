@@ -36,7 +36,7 @@ public class pendingOrders extends AppCompatActivity {
     int Extra_Rice1;
     String Drinks;
     String Drinks1;
-
+    String ma;
 
     String OrderID;
     String OrderID2;
@@ -80,21 +80,27 @@ public class pendingOrders extends AppCompatActivity {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
+                databaseReference.child("Orders").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        OrderID = snapshot.child("2021sha01116").child("ID NUMBER").getValue(String.class);
-                        UserName = snapshot.child("2021sha01116").child("UserName").getValue(String.class);
-                        Orders = snapshot.child("2021sha01116").child("orders").getValue(String.class);
-                        Extra_Rice = snapshot.child("2021sha01116").child("extraRice").getValue(int.class);
-                        Drinks = snapshot.child("2021sha01116").child("drinks").getValue(String.class);
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        OrderID = snapshot.child("2021sha01116").child("ID NUMBER").getValue(String.class);
+//                        UserName = snapshot.child("2021sha01116").child("UserName").getValue(String.class);
+//                        Orders = snapshot.child("2021sha01116").child("orders").getValue(String.class);
+//                        Extra_Rice = snapshot.child("2021sha01116").child("extraRice").getValue(int.class);
+//                        Drinks = snapshot.child("2021sha01116").child("drinks").getValue(String.class);
+//
+//                        OrderID2 = snapshot.child("2021sha01129").child("ID NUMBER").getValue(String.class);
+//                        UserName1 = snapshot.child("2021sha01129").child("UserName").getValue(String.class);
+//                        Orders1 = snapshot.child("2021sha01129").child("orders").getValue(String.class);
+//                        Extra_Rice1 = snapshot.child("2021sha01129").child("extraRice").getValue(int.class);
+//                        Drinks1 = snapshot.child("2021sha01129").child("drinks").getValue(String.class);
 
-                        OrderID2 = snapshot.child("2021sha01129").child("ID NUMBER").getValue(String.class);
-                        UserName1 = snapshot.child("2021sha01129").child("UserName").getValue(String.class);
-                        Orders1 = snapshot.child("2021sha01129").child("orders").getValue(String.class);
-                        Extra_Rice1 = snapshot.child("2021sha01129").child("extraRice").getValue(int.class);
-                        Drinks1 = snapshot.child("2021sha01129").child("drinks").getValue(String.class);
-                        your_array.add("Order Number: "+OrderID2+"\n"+UserName1+"\n"+Orders1+"\n"+"Extra Rice: "+Extra_Rice1+"\n"+Drinks1);
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                            ma = snapshot.getValue().toString();
+                            System.out.println("TEST" + ma);
+                            your_array.add(ma);
+                        }
+                        //your_array.add(ma);
                         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
                                 (pendingOrders.this, R.layout.adminlistviewdisplay,R.id.Adminlistdisplay, your_array);
                         listView.setAdapter(arrayAdapter);
