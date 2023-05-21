@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,13 +19,17 @@
         tools:targetApi="31">
         <activity
             android:name=".NotifSender"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ListView"
             android:exported="true" />
         <activity
             android:name=".pendingOrders"
             android:exported="true" />
+        <activity
+            android:name=".NotifSender"
+            android:exported="true"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".fragment"
             android:exported="true" />
@@ -55,6 +60,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service
+            android:name=".FirebaseMessagingService"
+            android:permission="TODO"
+            tools:ignore="ExportedService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <activity
             android:name=".orderNumber"
@@ -67,15 +81,7 @@
         <activity
             android:name=".adminui"
             android:exported="true" />
-        <service
-            android:name=".FirebaseMessagingService"
-            android:permission="TODO"
-            tools:ignore="ExportedService"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
+
     </application>
 
 

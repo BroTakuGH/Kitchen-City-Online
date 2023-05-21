@@ -20,7 +20,7 @@ public class NotifSender extends AppCompatActivity {
 
         EditText title = findViewById(R.id.titleID);
         EditText message = findViewById(R.id.messageId);
-        EditText token = findViewById(R.id.messageId);
+        EditText token = findViewById(R.id.tokenId);
 
         findViewById(R.id.alldeviceId).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -16,7 +16,8 @@
         android:hint="Title"/>
 
     <EditText
-        android:id="@+id/messageId" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/messageId"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
         android:text=""
         android:hint="message"/>
     <EditText
@@ -27,8 +28,10 @@
         android:hint="Token"/>
 
     <Button
-        android:id="@+id/alldeviceId" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:textAllCaps="false"
+        android:id="@+id/alldeviceId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="Send all device"/>
     <Button
         android:id="@+id/singledeviceId"

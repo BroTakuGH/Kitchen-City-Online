@@ -28,7 +28,7 @@ public class FcmNotificationsSender  {
 
     private RequestQueue requestQueue;
     private final String postUrl = "https://fcm.googleapis.com/fcm/send";
-    private final String fcmServerKey ="BH0J8-pxw5snXsih6olCqFiL94__FpiLoQoREpCT9KER8zsrG9w_tMHd3G59b3fV_VN-QVlj_MizYXSwzyPZfi8";
+    private final String fcmServerKey ="AAAAbvS8sHM:APA91bFHwZZxSth5vVqNkR2Qm1tMo-MnZBccz4hSv3PTXr7ll8x2rvP9gUrxG0TtrZmPhsRWAswZQ3m64Lv7gmTYIgHp2DtZ50MvDTzV4fHwKwLRUT_uffM12ViTZWLZPO11mzOvPoeL";
 
     public FcmNotificationsSender(String userFcmToken, String title, String body, Context mContext, Activity mActivity) {
         this.userFcmToken = userFcmToken;
@@ -49,7 +49,7 @@ public class FcmNotificationsSender  {
             JSONObject notiObject = new JSONObject();
             notiObject.put("title", title);
             notiObject.put("body", body);
-            notiObject.put("logokco1", R.drawable.logokco); // enter icon that exists in drawable only
+            notiObject.put("logokco", R.drawable.logokco); // enter icon that exists in drawable only
 
 
 
