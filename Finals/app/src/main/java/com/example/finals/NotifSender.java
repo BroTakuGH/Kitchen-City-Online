@@ -22,6 +22,8 @@ public class NotifSender extends AppCompatActivity {
         EditText message = findViewById(R.id.messageId);
         EditText token = findViewById(R.id.tokenId);
 
+//        FirebaseMessagingService firebaseMessagingService = new FirebaseMessagingService();
+//        System.out.println(firebaseMessagingService.resourceImage + "test111");
         findViewById(R.id.alldeviceId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

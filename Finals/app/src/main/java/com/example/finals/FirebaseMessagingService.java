@@ -28,6 +28,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
 
      NotificationManager mNotificationManager;
 
+     int resourceImage;
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -48,7 +49,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
         v.vibrate(pattern, -1);
 
 
-        int resourceImage = getResources().getIdentifier(remoteMessage.getNotification().getIcon(), "drawable", getPackageName());
+        resourceImage = getResources().getIdentifier(remoteMessage.getNotification().getIcon(), "drawable", getPackageName());
 
 
 
@@ -97,6 +98,9 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
         mNotificationManager.notify(100, builder.build());
 
 
+    }
+    public int resourceImage2(){
+        return resourceImage;
     }
 
 }
