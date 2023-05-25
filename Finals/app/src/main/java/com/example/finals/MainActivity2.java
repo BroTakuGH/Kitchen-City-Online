@@ -75,7 +75,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                                     if (getPassword.equals(pass)) {
                                         Toast.makeText(MainActivity2.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(MainActivity2.this, costumerUI.class);
+                                        Intent intent = new Intent(MainActivity2.this, NotifSender.class);
                                         startActivity(intent);
 
                                         OrderManager.GetInstance().username = id;
