@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< Updated upstream:Finals/app/src/main/AndroidManifest.xml
+=======
+    <uses-permission android:name="android.permission.VIBRATE" />
+>>>>>>> Stashed changes:Kitchen City Online/app/src/main/AndroidManifest.xml
 
     <application
         android:allowBackup="true"
@@ -13,8 +17,33 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.Finals"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+<<<<<<< Updated upstream:Finals/app/src/main/AndroidManifest.xml
+=======
+            android:name=".signup_page"
+            android:exported="true"
+            android:label="@string/title_activity_signup_page" />
+        <activity
+            android:name=".login_page"
+            android:exported="true"
+            android:label="@string/title_activity_login_page" />
+        <activity
+            android:name=".RealMainCostumer"
+            android:exported="true"
+            android:label="@string/title_activity_real_main_costumer" />
+        <activity
+            android:name=".NotifSender"
+            android:exported="true" />
+        <activity
+            android:name=".newMainUser"
+            android:exported="true" />
+        <activity
+            android:name=".ListView"
+            android:exported="true" />
+        <activity
+>>>>>>> Stashed changes:Kitchen City Online/app/src/main/AndroidManifest.xml
             android:name=".pendingOrders"
             android:exported="true" />
         <activity
@@ -42,6 +71,29 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+<<<<<<< Updated upstream:Finals/app/src/main/AndroidManifest.xml
+=======
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".FirebaseMessagingService"
+            android:exported="true"
+            android:permission="TODO"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".orderNumber"
+>>>>>>> Stashed changes:Kitchen City Online/app/src/main/AndroidManifest.xml
             android:exported="true" />
 
         <meta-data

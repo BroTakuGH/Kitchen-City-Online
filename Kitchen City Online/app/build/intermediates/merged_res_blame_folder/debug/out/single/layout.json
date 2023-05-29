@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/fragment_costumer.xml",
+        "source": "com.example.finals.app-main-62:/layout/fragment_costumer.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/fragment_first.xml",
+        "source": "com.example.finals.app-main-62:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/fragment_second.xml",
+        "source": "com.example.finals.app-main-62:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_order_number.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_order_number.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_list_view.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_list_view.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_login_page.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_login_page.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/adminlistviewdisplay.xml",
+        "source": "com.example.finals.app-main-62:/layout/adminlistviewdisplay.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/fragment_home.xml",
+        "source": "com.example.finals.app-main-62:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_notif_sender.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_notif_sender.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_main4.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_main4.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_signup_page.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_signup_page.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/layout_bottom_sheet.xml",
+        "source": "com.example.finals.app-main-62:/layout/layout_bottom_sheet.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_cart.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_cart.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_real_main_costumer.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_real_main_costumer.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/fragment_notifications.xml",
+        "source": "com.example.finals.app-main-62:/layout/fragment_notifications.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/fragment_cart.xml",
+        "source": "com.example.finals.app-main-62:/layout/fragment_cart.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_main3.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_main3.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/order.xml",
+        "source": "com.example.finals.app-main-62:/layout/order.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/fragment_dashboard.xml",
+        "source": "com.example.finals.app-main-62:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_fragment.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_fragment.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/fragment_new_costumer_u_i.xml",
+        "source": "com.example.finals.app-main-62:/layout/fragment_new_costumer_u_i.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_new_main_user.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_new_main_user.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_main.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_pending_orders.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_pending_orders.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/activity_main2.xml",
+        "source": "com.example.finals.app-main-62:/layout/activity_main2.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/header.xml",
+        "source": "com.example.finals.app-main-62:/layout/header.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/costumerui.xml",
+        "source": "com.example.finals.app-main-62:/layout/costumerui.xml"
+    },
+    {
+        "merged": "com.example.finals.app-mergeDebugResources-59:/layout/admin.xml",
+        "source": "com.example.finals.app-main-62:/layout/admin.xml"
+    }
+]

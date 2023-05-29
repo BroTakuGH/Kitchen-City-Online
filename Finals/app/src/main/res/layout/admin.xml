@@ -5,7 +5,7 @@
     android:id="@+id/itemEdit0"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#181D2D"
+    android:background="#F7F7F7"
     tools:context=".adminui">
 
     <ScrollView
@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
                     android:text="Admin"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
 
@@ -531,7 +531,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="70dp"
+                android:layout_marginBottom="150dp"
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
@@ -629,11 +629,20 @@
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/shape"
-        app:menu="@menu/menu_bar4"
-        android:id="@+id/nav_bar4"/>
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemTextColor="#000000"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/item_menu3" />
 
 </RelativeLayout>

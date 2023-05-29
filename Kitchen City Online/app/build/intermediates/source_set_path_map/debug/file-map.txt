@@ -1,0 +1,63 @@
+com.example.finals.app-lifecycle-runtime-ktx-2.5.1-0 C:\Users\8lais\.gradle\caches\transforms-3\020d83dfdbdb28d1cc2176fd5b337d02\transformed\lifecycle-runtime-ktx-2.5.1\res
+com.example.finals.app-support-compat-28.0.0-1 C:\Users\8lais\.gradle\caches\transforms-3\03e808f2b6b1bbdaaf2685c9aa091bbe\transformed\support-compat-28.0.0\res
+com.example.finals.app-firebase-messaging-23.1.2-2 C:\Users\8lais\.gradle\caches\transforms-3\1309a39e04ba906a3b6aa0e9262782f8\transformed\firebase-messaging-23.1.2\res
+com.example.finals.app-annotation-experimental-1.3.0-3 C:\Users\8lais\.gradle\caches\transforms-3\15f25decc0357ff2ad523b6c3a7e88e2\transformed\annotation-experimental-1.3.0\res
+com.example.finals.app-activity-1.6.0-4 C:\Users\8lais\.gradle\caches\transforms-3\184995068ea02b84d9786cfdb061f8a4\transformed\activity-1.6.0\res
+com.example.finals.app-coordinatorlayout-1.1.0-5 C:\Users\8lais\.gradle\caches\transforms-3\196a6f924a7464f6ed961e7a4305c4ec\transformed\coordinatorlayout-1.1.0\res
+com.example.finals.app-lifecycle-livedata-core-ktx-2.5.1-6 C:\Users\8lais\.gradle\caches\transforms-3\1f9df8f00964657af6d2a8f9ba7880c3\transformed\lifecycle-livedata-core-ktx-2.5.1\res
+com.example.finals.app-core-ktx-1.9.0-7 C:\Users\8lais\.gradle\caches\transforms-3\20592a24486c788fcbf4286674654804\transformed\core-ktx-1.9.0\res
+com.example.finals.app-cardview-1.0.0-8 C:\Users\8lais\.gradle\caches\transforms-3\240b11790c7e481a267b612de14cbf7b\transformed\cardview-1.0.0\res
+com.example.finals.app-navigation-runtime-2.5.3-9 C:\Users\8lais\.gradle\caches\transforms-3\2c1ed57b9d1e1c25ee526ad00b04ef7d\transformed\navigation-runtime-2.5.3\res
+com.example.finals.app-transition-28.0.0-10 C:\Users\8lais\.gradle\caches\transforms-3\2ee0f24098248ebc4e2ad5c5f708b78e\transformed\transition-28.0.0\res
+com.example.finals.app-material-1.9.0-11 C:\Users\8lais\.gradle\caches\transforms-3\3afd84b532611f6f93627611a36ab05c\transformed\material-1.9.0\res
+com.example.finals.app-constraintlayout-2.1.4-12 C:\Users\8lais\.gradle\caches\transforms-3\45adaf8f589696d0cfb95877814026b2\transformed\constraintlayout-2.1.4\res
+com.example.finals.app-lifecycle-runtime-2.5.1-13 C:\Users\8lais\.gradle\caches\transforms-3\4f4b23c47539bb2be1e3ac0874672909\transformed\lifecycle-runtime-2.5.1\res
+com.example.finals.app-recyclerview-v7-28.0.0-14 C:\Users\8lais\.gradle\caches\transforms-3\5387bc47a12911699a599ef4c726a33b\transformed\recyclerview-v7-28.0.0\res
+com.example.finals.app-design-28.0.0-15 C:\Users\8lais\.gradle\caches\transforms-3\56f616374ddabb436b29c67ceb188668\transformed\design-28.0.0\res
+com.example.finals.app-savedstate-ktx-1.2.0-16 C:\Users\8lais\.gradle\caches\transforms-3\5c3f940255810ff532147897fca4a773\transformed\savedstate-ktx-1.2.0\res
+com.example.finals.app-appcompat-resources-1.6.1-17 C:\Users\8lais\.gradle\caches\transforms-3\5f61d52df934f44d0e7270ad07188231\transformed\appcompat-resources-1.6.1\res
+com.example.finals.app-play-services-base-18.1.0-18 C:\Users\8lais\.gradle\caches\transforms-3\65ea40e8e10cb0aea544a6c05091798d\transformed\play-services-base-18.1.0\res
+com.example.finals.app-recyclerview-1.1.0-19 C:\Users\8lais\.gradle\caches\transforms-3\6673652b6bc6e3d982cee403d0084c22\transformed\recyclerview-1.1.0\res
+com.example.finals.app-constraint-layout-2.0.4-20 C:\Users\8lais\.gradle\caches\transforms-3\6865cb1f6bdd749f7b80c943abe92a7f\transformed\constraint-layout-2.0.4\res
+com.example.finals.app-emoji2-1.2.0-21 C:\Users\8lais\.gradle\caches\transforms-3\6bf00fa0de6d83981979a788a7cb543f\transformed\emoji2-1.2.0\res
+com.example.finals.app-transition-1.4.1-22 C:\Users\8lais\.gradle\caches\transforms-3\74f66c16a7869105ff2b02a628660d2d\transformed\transition-1.4.1\res
+com.example.finals.app-navigation-ui-1.0.0-23 C:\Users\8lais\.gradle\caches\transforms-3\7d80b53d2747411a5f92f11444338c01\transformed\navigation-ui-1.0.0\res
+com.example.finals.app-lifecycle-viewmodel-2.5.1-24 C:\Users\8lais\.gradle\caches\transforms-3\7d94b46dcb646f1ca0bdd147fd3fd2a6\transformed\lifecycle-viewmodel-2.5.1\res
+com.example.finals.app-coordinatorlayout-28.0.0-25 C:\Users\8lais\.gradle\caches\transforms-3\8049851e66238640dd9d52fedd90782f\transformed\coordinatorlayout-28.0.0\res
+com.example.finals.app-swiperefreshlayout-1.2.0-alpha01-26 C:\Users\8lais\.gradle\caches\transforms-3\814960b35a1f9972eb179e220e229c17\transformed\swiperefreshlayout-1.2.0-alpha01\res
+com.example.finals.app-navigation-common-1.0.0-27 C:\Users\8lais\.gradle\caches\transforms-3\8210a9fb309307264716f6378276efdd\transformed\navigation-common-1.0.0\res
+com.example.finals.app-core-1.9.0-28 C:\Users\8lais\.gradle\caches\transforms-3\828b23f5cf784fd9245164e3883b33ef\transformed\core-1.9.0\res
+com.example.finals.app-emoji2-views-helper-1.2.0-29 C:\Users\8lais\.gradle\caches\transforms-3\851e7f517cbefb3c43308f66d3fa92ee\transformed\emoji2-views-helper-1.2.0\res
+com.example.finals.app-viewpager2-1.0.0-30 C:\Users\8lais\.gradle\caches\transforms-3\92bd374b2916af443abd3a3401d26061\transformed\viewpager2-1.0.0\res
+com.example.finals.app-window-1.0.0-31 C:\Users\8lais\.gradle\caches\transforms-3\a0a55e3e9956eedfd379bf5e994efc18\transformed\window-1.0.0\res
+com.example.finals.app-startup-runtime-1.1.1-32 C:\Users\8lais\.gradle\caches\transforms-3\a3e7292ef9f4570d07bc4147c6d43f10\transformed\startup-runtime-1.1.1\res
+com.example.finals.app-navigation-fragment-1.0.0-33 C:\Users\8lais\.gradle\caches\transforms-3\a5b7d6ba4e4cff386f2362889b57edd3\transformed\navigation-fragment-1.0.0\res
+com.example.finals.app-drawerlayout-1.1.1-34 C:\Users\8lais\.gradle\caches\transforms-3\b2e362342853b4e16dfc91947e4b70f9\transformed\drawerlayout-1.1.1\res
+com.example.finals.app-navigation-runtime-1.0.0-35 C:\Users\8lais\.gradle\caches\transforms-3\b2f3a40e6badda54fcc808e6bf993527\transformed\navigation-runtime-1.0.0\res
+com.example.finals.app-appcompat-1.6.1-36 C:\Users\8lais\.gradle\caches\transforms-3\b450ec9f42de1561023534cf0fe5010c\transformed\appcompat-1.6.1\res
+com.example.finals.app-lifecycle-viewmodel-ktx-2.5.1-37 C:\Users\8lais\.gradle\caches\transforms-3\b538545ecc9efdad1748aa9e5f4d6311\transformed\lifecycle-viewmodel-ktx-2.5.1\res
+com.example.finals.app-lifecycle-viewmodel-savedstate-2.5.1-38 C:\Users\8lais\.gradle\caches\transforms-3\b5b7bc6467f94be915ae5069c7e6eb3b\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
+com.example.finals.app-firebase-common-20.3.2-39 C:\Users\8lais\.gradle\caches\transforms-3\b61d53bc85b13aa8c8fee98f1b437f06\transformed\firebase-common-20.3.2\res
+com.example.finals.app-slidingpanelayout-1.2.0-40 C:\Users\8lais\.gradle\caches\transforms-3\c6a1b6bd2d4a6a738f61374b31e92b4e\transformed\slidingpanelayout-1.2.0\res
+com.example.finals.app-fragment-ktx-1.5.4-41 C:\Users\8lais\.gradle\caches\transforms-3\cc3b3c850f80a31f30b2bbf159fd2736\transformed\fragment-ktx-1.5.4\res
+com.example.finals.app-navigation-fragment-2.5.3-42 C:\Users\8lais\.gradle\caches\transforms-3\cdc7449fdddfd8c7d28ac688b7145ebe\transformed\navigation-fragment-2.5.3\res
+com.example.finals.app-fragment-1.5.4-43 C:\Users\8lais\.gradle\caches\transforms-3\d1d7433bba883f2ffb6c1472de9578e4\transformed\fragment-1.5.4\res
+com.example.finals.app-cardview-v7-28.0.0-44 C:\Users\8lais\.gradle\caches\transforms-3\d3a0ba24f42678745442f543f029417a\transformed\cardview-v7-28.0.0\res
+com.example.finals.app-lifecycle-livedata-core-2.5.1-45 C:\Users\8lais\.gradle\caches\transforms-3\d51d44138b128bf5a16cbedf9f3f8002\transformed\lifecycle-livedata-core-2.5.1\res
+com.example.finals.app-navigation-common-2.5.3-46 C:\Users\8lais\.gradle\caches\transforms-3\d5b2d86e863439f37e44d566f9449ce1\transformed\navigation-common-2.5.3\res
+com.example.finals.app-play-services-basement-18.1.0-47 C:\Users\8lais\.gradle\caches\transforms-3\df35b2152390ee5e961981855b9e3ce4\transformed\play-services-basement-18.1.0\res
+com.example.finals.app-appcompat-v7-28.0.0-48 C:\Users\8lais\.gradle\caches\transforms-3\e4a9c78751e62671a9123a8ad8c84bfd\transformed\appcompat-v7-28.0.0\res
+com.example.finals.app-navigation-ui-2.5.3-49 C:\Users\8lais\.gradle\caches\transforms-3\e599d882ac962b0a49cf664c52122f74\transformed\navigation-ui-2.5.3\res
+com.example.finals.app-glide-4.15.1-50 C:\Users\8lais\.gradle\caches\transforms-3\ed81855d97413ec8568c10ba92ded06e\transformed\glide-4.15.1\res
+com.example.finals.app-lifecycle-process-2.4.1-51 C:\Users\8lais\.gradle\caches\transforms-3\ef85055f8d99b576582e525160ce837e\transformed\lifecycle-process-2.4.1\res
+com.example.finals.app-savedstate-1.2.0-52 C:\Users\8lais\.gradle\caches\transforms-3\f53f0cdcbd4ac0d5134b4a004c22a223\transformed\savedstate-1.2.0\res
+com.example.finals.app-activity-ktx-1.6.0-53 C:\Users\8lais\.gradle\caches\transforms-3\fa2b1f111febf0e9b3964034d427de18\transformed\activity-ktx-1.6.0\res
+com.example.finals.app-google-services-54 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\build\generated\res\google-services\debug
+com.example.finals.app-pngs-55 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\build\generated\res\pngs\debug
+com.example.finals.app-resValues-56 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\build\generated\res\resValues\debug
+com.example.finals.app-rs-57 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\build\generated\res\rs\debug
+com.example.finals.app-packageDebugResources-58 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.finals.app-packageDebugResources-59 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.finals.app-merged_res-60 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\build\intermediates\merged_res\debug
+com.example.finals.app-debug-61 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\src\debug\res
+com.example.finals.app-main-62 C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\src\main\res
