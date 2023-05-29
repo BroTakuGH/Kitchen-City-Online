@@ -51,7 +51,7 @@ public class pendingOrders extends AppCompatActivity {
         setContentView(R.layout.activity_pending_orders);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kitchencityonline-1fbdb-default-rtdb.asia-southeast1.firebasedatabase.app");
         listView = (ListView) findViewById(R.id.AdminList1);
-        nav3 = findViewById(R.id.nav_bar3);
+        nav3 = findViewById(R.id.bottom_navigation);
 
         List<String> your_array = new ArrayList<String>();
 
@@ -131,14 +131,20 @@ public class pendingOrders extends AppCompatActivity {
 
                 switch (item.getItemId()){
 
-                    case R.id.home:
+                    case R.id.nav_home:
                         Intent intent=new Intent(pendingOrders.this,adminui.class);
                         startActivity(intent);
                         break;
 
-                    case R.id.logout:
-                        Intent intent2=new Intent(pendingOrders.this,MainActivity2.class);
+                    case R.id.nav_notif:
+                        Intent intent2=new Intent(pendingOrders.this,NotifSender.class);
                         startActivity(intent2);
+                        break;
+
+
+                    case R.id.nav_logout:
+                        Intent intent3=new Intent(pendingOrders.this,MainActivity2.class);
+                        startActivity(intent3);
                         break;
 
                 }
