@@ -2,6 +2,7 @@ package com.example.finals;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.provider.ContactsContract;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,7 +34,8 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         TextView signup = findViewById(R.id.signup);
-        TextView login = findViewById(R.id.loginButton);
+
+        AppCompatButton login = findViewById(R.id.loginButton);
         EditText id_input = findViewById(R.id.userID);
         EditText password_input = findViewById(R.id.password_input);
 
@@ -75,7 +78,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                                     if (getPassword.equals(pass)) {
                                         Toast.makeText(MainActivity2.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(MainActivity2.this, NotifSender.class);
+                                        Intent intent = new Intent(MainActivity2.this, costumerUI.class);
                                         startActivity(intent);
 
                                         OrderManager.GetInstance().username = id;

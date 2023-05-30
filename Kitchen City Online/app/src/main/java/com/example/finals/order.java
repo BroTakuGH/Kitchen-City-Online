@@ -1,11 +1,9 @@
 package com.example.finals;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,8 +11,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
@@ -46,7 +42,7 @@ public class order extends AppCompatActivity {
     private CheckBox checkBoxVisibilityCoke;
     private CheckBox checkBoxVisibilitySprite;
     private ArrayList<SubItem> selectedSubItems = new ArrayList<SubItem>();
-    Button button;
+    AppCompatButton button;
 
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
 

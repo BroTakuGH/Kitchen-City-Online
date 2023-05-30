@@ -214,7 +214,7 @@ public class adminui extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        nav4 = findViewById(R.id.nav_bar4);
+        nav4 = findViewById(R.id.bottom_navigation);
 
         nav4.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -222,14 +222,20 @@ public class adminui extends AppCompatActivity {
 
                 switch (item.getItemId()){
 
-                    case R.id.shoppingCart:
+                    case R.id.nav_cart:
                         Intent intent=new Intent(adminui.this,pendingOrders.class);
                         startActivity(intent);
                         break;
 
-                    case R.id.logout:
-                        Intent intent2=new Intent(adminui.this,MainActivity2.class);
+
+                    case R.id.nav_notif:
+                        Intent intent2=new Intent(adminui.this,NotifSender.class);
                         startActivity(intent2);
+                        break;
+
+                    case R.id.nav_logout:
+                        Intent intent3=new Intent(adminui.this,MainActivity2.class);
+                        startActivity(intent3);
                         break;
 
                 }

@@ -1,42 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".NotifSender"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
+    android:background="#F7F7F7">
 
-    <EditText
-        android:id="@+id/titleID"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:hint="Title"/>
+        android:orientation="vertical"
+        android:padding="30dp">
 
-    <EditText
-        android:id="@+id/messageId"
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text=""
-        android:hint="message"/>
-    <EditText
-        android:id="@+id/tokenId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:hint="Token"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Notification"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"/>
 
-    <Button
-        android:id="@+id/alldeviceId"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#808080"/>
+
+                <EditText
+                    android:id="@+id/titleID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#808080"/>
+
+                <EditText
+                    android:id="@+id/messageID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginBottom="20dp"/>
+
+<!--                <TextView-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Token"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:fontFamily="sans-serif-black"-->
+<!--                    android:textColor="#808080"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/tokenID"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text=""/>-->
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/alldeviceId"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Send all device"
+            android:textColor="#808080"
+            android:background="@drawable/round_corner"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"/>
+
+<!--        <android.support.v7.widget.AppCompatButton-->
+<!--            android:id="@+id/singledeviceId"-->
+<!--            android:layout_width="240dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:text="Send single device"-->
+<!--            android:textColor="#808080"-->
+<!--            android:background="@drawable/round_corner"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textSize="20dp"-->
+<!--            android:layout_marginTop="20dp"/>-->
+
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Send all device"/>
-    <Button
-        android:id="@+id/singledeviceId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Send single device"/>
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemTextColor="#000000"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/item_menu5" />
+
+
+</RelativeLayout>
