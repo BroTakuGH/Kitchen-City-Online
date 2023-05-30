@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="885a4959-0ea8-4235-a9ad-4121af693aad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/pendingOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/pendingOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,19 +87,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "android-custom-viewC:/Users/8lais/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.8.0/60ab9cfeed56173f0fb0c798009d91e049bbbba1/material-1.8.0-sources.jar!/com/google/android/material/navigation/NavigationBarView.java_SELECTED": "NavigationBarView",
-    "cidr.known.project.marker": "true",
-    "last_directory_selection": "C:/Users/8lais/AndroidStudioProjects/Kitchen-City-Online/Kitchen City Online/app/src/main/res/drawable",
-    "last_opened_file_path": "C:/Users/rayki/Documents/GitHub/Kitchen-City-Online/Kitchen City Online/app",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;android-custom-viewC:/Users/8lais/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.8.0/60ab9cfeed56173f0fb0c798009d91e049bbbba1/material-1.8.0-sources.jar!/com/google/android/material/navigation/NavigationBarView.java_SELECTED&quot;: &quot;NavigationBarView&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/8lais/AndroidStudioProjects/Kitchen-City-Online/Kitchen City Online/app/src/main/res/drawable&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rayki/Documents/GitHub/Kitchen-City-Online/Kitchen City Online/app&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\8lais\AndroidStudioProjects\Kitchen-City-Online\Kitchen City Online\app\src\main\res\drawable" />

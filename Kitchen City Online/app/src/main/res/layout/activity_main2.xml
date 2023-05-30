@@ -92,7 +92,9 @@
             android:textColorHint="#BCBCBC"
             android:background="@drawable/loginbg"
             android:paddingStart="30dp"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:password="true"
+            />
 
         <TextView
             android:id="@+id/forgotpass"
