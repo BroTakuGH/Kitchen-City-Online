@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity2 extends AppCompatActivity {
+    String getUsername;
    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kitchencityonline-1fbdb-default-rtdb.asia-southeast1.firebasedatabase.app");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,9 +77,13 @@ public class MainActivity2 extends AppCompatActivity {
                                 if (snapshot.hasChild(id)) {
                                     final String getPassword = snapshot.child(id).child("Password").getValue(String.class);
 
+
                                     if (getPassword.equals(pass)) {
+                                        getUsername = snapshot.child(id).child("UserName").getValue(String.class);
                                         Toast.makeText(MainActivity2.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(MainActivity2.this, costumerUI.class);
+
+                                        intent.putExtra("Username", getUsername);
                                         startActivity(intent);
 
                                         OrderManager.GetInstance().username = id;

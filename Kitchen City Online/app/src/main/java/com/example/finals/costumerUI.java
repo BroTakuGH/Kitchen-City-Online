@@ -58,6 +58,7 @@ public class costumerUI extends AppCompatActivity {
     String CaptionDisplay5;
     String CaptionDisplay6;
     Button Refresh;
+    String user_Name;
 
     SwipeRefreshLayout swipeRefreshLayout;
 
@@ -99,7 +100,7 @@ public class costumerUI extends AppCompatActivity {
             }
         });
 
-
+        TextView USER = findViewById(R.id.userWelcome);
         ImageView firstMenu = findViewById(R.id.firstMenu);
         TextView firstPrice = findViewById(R.id.firstPrice);
         ImageView secondMenu = findViewById(R.id.secondMenu);
@@ -124,6 +125,8 @@ public class costumerUI extends AppCompatActivity {
         databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                user_Name = (getIntent().getStringExtra("Username"));
                 PriceDisplay1 = snapshot.child("1").child("price").getValue(String.class);
                 imageURLDisplay1 = snapshot.child("1").child("imageURL").getValue(String.class);
                 CaptionDisplay1 = snapshot.child("1").child("caption").getValue(String.class);
@@ -169,6 +172,8 @@ public class costumerUI extends AppCompatActivity {
                 caption5.setText(CaptionDisplay5);
                 caption6.setText(CaptionDisplay6);
 
+                USER.setText(user_Name);
+
             }
 
             @Override
@@ -186,6 +191,10 @@ public class costumerUI extends AppCompatActivity {
                 databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        user_Name = (getIntent().getStringExtra("Username"));
+
+                        System.out.println(user_Name + "Test");
+
                         PriceDisplay1 = snapshot.child("1").child("price").getValue(String.class);
                         imageURLDisplay1 = snapshot.child("1").child("imageURL").getValue(String.class);
                         CaptionDisplay1 = snapshot.child("1").child("caption").getValue(String.class);
@@ -251,6 +260,7 @@ public class costumerUI extends AppCompatActivity {
                         caption4.setText(CaptionDisplay4);
                         caption5.setText(CaptionDisplay5);
                         caption6.setText(CaptionDisplay6);
+                        USER.setText(user_Name);
                         swipeRefreshLayout.setRefreshing(false);
 
                     }

@@ -20,22 +20,22 @@
             android:name=".layout_bottom_sheet"
             android:exported="false"
             android:label="@string/title_activity_layout_bottom_sheet" />
-        <activity
-            android:name=".MainActivity5"
-            android:exported="false"
-            android:label="@string/title_activity_main5" />
-        <activity
-            android:name=".signup_page"
-            android:exported="true"
-            android:label="@string/title_activity_signup_page" />
-        <activity
-            android:name=".login_page"
-            android:exported="true"
-            android:label="@string/title_activity_login_page" />
-        <activity
-            android:name=".RealMainCostumer"
-            android:exported="true"
-            android:label="@string/title_activity_real_main_costumer" />
+<!--        <activity-->
+<!--            android:name=".MainActivity5"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_main5" />-->
+<!--        <activity-->
+<!--            android:name=".signup_page"-->
+<!--            android:exported="true"-->
+<!--            android:label="@string/title_activity_signup_page" />-->
+<!--        <activity-->
+<!--            android:name=".login_page"-->
+<!--            android:exported="true"-->
+<!--            android:label="@string/title_activity_login_page" />-->
+<!--        <activity-->
+<!--            android:name=".RealMainCostumer"-->
+<!--            android:exported="true"-->
+<!--            android:label="@string/title_activity_real_main_costumer" />-->
         <activity
             android:name=".NotifSender"
             android:exported="true" />
