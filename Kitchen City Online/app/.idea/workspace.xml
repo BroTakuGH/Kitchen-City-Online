@@ -10,13 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="885a4959-0ea8-4235-a9ad-4121af693aad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/MainActivity2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/MainActivity2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/costumerUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/costumerUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/costumerui.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/costumerui.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/orderNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/orderNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/order.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/order.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
     "android-custom-viewC:/Users/8lais/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.8.0/60ab9cfeed56173f0fb0c798009d91e049bbbba1/material-1.8.0-sources.jar!/com/google/android/material/navigation/NavigationBarView.java_SELECTED": "NavigationBarView",
     "cidr.known.project.marker": "true",
     "last_directory_selection": "C:/Users/8lais/AndroidStudioProjects/Kitchen-City-Online/Kitchen City Online/app/src/main/res/drawable",
-    "last_opened_file_path": "C:/Users/rayki/Documents/GitHub/Kitchen-City-Online/Finals/app",
+    "last_opened_file_path": "C:/Users/rayki/Documents/GitHub/Kitchen-City-Online/Kitchen City Online/app",
     "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
 }]]></component>

@@ -11,6 +11,7 @@ public class orderNumber extends AppCompatActivity {
 
     TextView textView;
     TextView orderNumber;
+    String Username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +19,12 @@ public class orderNumber extends AppCompatActivity {
         orderNumber = findViewById(R.id.textView3);
         textView = findViewById(R.id.xButton);
         orderNumber.setText(OrderManager.GetInstance().randomNumber);
+        Username=(getIntent().getStringExtra("Username"));
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(orderNumber.this,costumerUI.class);
+                intent.putExtra("Username",Username);
                 startActivity(intent);
             }
         });

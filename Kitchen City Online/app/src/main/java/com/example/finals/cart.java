@@ -32,7 +32,7 @@ public class cart extends AppCompatActivity {
 
     ListView listView;
 
-
+    String Username;
 
 
     @Override
@@ -43,7 +43,7 @@ public class cart extends AppCompatActivity {
         nav2 = findViewById(R.id.bottom_navigation);
         String costumerOrder [] = {};
         String orders2 = OrderManager.GetInstance().listViewContent;
-
+        Username = (getIntent().getStringExtra("Username"));
         nav2.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -52,6 +52,7 @@ public class cart extends AppCompatActivity {
 
                     case R.id.nav_home:
                         Intent intent=new Intent(cart.this, costumerUI.class);
+                        intent.putExtra("Username", Username);
                         startActivity(intent);
                         break;
 
@@ -96,13 +97,14 @@ public class cart extends AppCompatActivity {
                 Random random = new Random();
                 int randomNumber = random.nextInt(1000);
                 OrderManager.GetInstance().randomNumber = Integer.toString(randomNumber);
-                databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("user").setValue(OrderManager.GetInstance().username);
+                databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("user").setValue(Username);
                 databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("orders").setValue(orderss);
                 databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("drinks").setValue(drinks);
                 databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("extraRice").setValue(OrderManager.GetInstance().extraRice);
                 databaseReference.child("Orders").child(OrderManager.GetInstance().randomNumber).child("orderNumber").setValue(OrderManager.GetInstance().randomNumber);
 
                 Intent intent=new Intent(cart.this,orderNumber.class);
+                intent.putExtra("Username",Username);
                 startActivity(intent);
             }
         });

@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -31,7 +32,7 @@ public class order extends AppCompatActivity {
     private String drinks;
     private String extraRice1 = "No Extra Rice";
 
-
+    String Username;
     private int order1;
     String Caption;
 
@@ -44,6 +45,8 @@ public class order extends AppCompatActivity {
     private ArrayList<SubItem> selectedSubItems = new ArrayList<SubItem>();
     AppCompatButton button;
 
+    FloatingActionButton goToCart;
+
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
 
     @Override
@@ -55,12 +58,12 @@ public class order extends AppCompatActivity {
         //setSupportActionBar(toolbar);
         //Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         Caption =(getIntent().getStringExtra("captiono"));
-
+        Username = (getIntent().getStringExtra("Username"));
         checkBoxVisibilityExtraRice = findViewById(R.id.extraRiceCheckbox);
         checkBoxVisibilityRoyal = findViewById(R.id.royalCheckBox);
         checkBoxVisibilityCoke = findViewById(R.id.cokeCheckBox);
         checkBoxVisibilitySprite = findViewById(R.id.spriteCheckBox);
-
+        goToCart = findViewById(R.id.goToCart);
 //        boolean extraRiceIsChecked = checkBoxVisibilityExtraRice.isChecked();
 //        boolean royalIsChecked = checkBoxVisibilityRoyal.isChecked();
 //        boolean cokeIsChecked = checkBoxVisibilityCoke.isChecked();
@@ -189,19 +192,29 @@ public class order extends AppCompatActivity {
 //                OrderManager.GetInstance().drinks = drinks;
 //                OrderManager.GetInstance().extraRice = extraRice1;
 //            OrderManager.GetInstance().listViewContent = "lol";
-                System.out.println(OrderManager.GetInstance().totalPrice + "totalprice");
-                System.out.println(OrderManager.GetInstance().username);
+                //System.out.println(OrderManager.GetInstance().totalPrice + "totalprice");
+                //System.out.println(OrderManager.GetInstance().username);
                 for (OrderItem item : OrderManager.GetInstance().orders) {
-                    System.out.println(item.mealName);
+                    //System.out.println(item.mealName);
                 }
 //            String test = OrderManager.GetInstance().listViewContent;
                 System.out.println(OrderManager.GetInstance().listViewContent);
                 Intent intent = new Intent(order.this, costumerUI.class);
+                intent.putExtra("Username", Username);
                 startActivity(intent);
                 System.out.println(totalPrice + "totalprice2");
             }
 
 
+        });
+
+        goToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(order.this, cart.class);
+                intent.putExtra("Username", Username);
+                startActivity(intent);
+            }
         });
 
         Glide.with(this).load(getIntent().getStringExtra("imageo"))

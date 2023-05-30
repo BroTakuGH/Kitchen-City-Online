@@ -70,7 +70,7 @@ public class costumerUI extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
+        user_Name = (getIntent().getStringExtra("Username"));
         setContentView(R.layout.costumerui);
         //Declaration
 
@@ -86,6 +86,7 @@ public class costumerUI extends AppCompatActivity {
 
                         case R.id.nav_cart:
                             Intent intent=new Intent(costumerUI.this,cart.class);
+                            intent.putExtra("Username", user_Name);
                             startActivity(intent);
                             break;
 
@@ -344,6 +345,7 @@ public class costumerUI extends AppCompatActivity {
                             intent.putExtra("captiono",CaptionDisplay1);
                             intent.putExtra("priceo",Price);
                             intent.putExtra("imageo", imageURL);
+                        intent.putExtra("Username",user_Name);
 //                            bottomSheetDialog.setContentView(bottomSheetView);
 //                            bottomSheetDialog.show();
                             startActivity(intent);
@@ -369,6 +371,7 @@ public class costumerUI extends AppCompatActivity {
                         Price = snapshot.child("2").child("price").getValue(String.class);
                         imageURL = snapshot.child("2").child("imageURL").getValue(String.class);
                         Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                        intent.putExtra("Username",user_Name);
                         intent.putExtra("captiono",CaptionDisplay2);
                         intent.putExtra("priceo",Price);
                         intent.putExtra("imageo", imageURL);
@@ -395,6 +398,7 @@ public class costumerUI extends AppCompatActivity {
                     Price = snapshot.child("3").child("price").getValue(String.class);
                     imageURL = snapshot.child("3").child("imageURL").getValue(String.class);
                     Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+                    intent.putExtra("Username",user_Name);
                     intent.putExtra("captiono",CaptionDisplay3);
                     intent.putExtra("priceo",Price);
                     intent.putExtra("imageo", imageURL);
@@ -424,6 +428,7 @@ public class costumerUI extends AppCompatActivity {
                         intent.putExtra("captiono",CaptionDisplay4);
                         intent.putExtra("priceo", Price);
                         intent.putExtra("imageo", imageURL);
+                        intent.putExtra("Username",user_Name);
                         startActivity(intent);
                     }
 
@@ -450,6 +455,7 @@ public class costumerUI extends AppCompatActivity {
                         intent.putExtra("captiono",CaptionDisplay5);
                         intent.putExtra("priceo", Price);
                         intent.putExtra("imageo", imageURL);
+                        intent.putExtra("Username",user_Name);
                         startActivity(intent);
                     }
 
@@ -474,6 +480,7 @@ public class costumerUI extends AppCompatActivity {
                     imageURL = snapshot.child("6").child("imageURL").getValue(String.class);
                     Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
                     intent.putExtra("captiono",CaptionDisplay6);
+                    intent.putExtra("Username",user_Name);
                     intent.putExtra("priceo", Price);
                     intent.putExtra("imageo", imageURL);
                     startActivity(intent);
