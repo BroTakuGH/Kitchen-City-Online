@@ -11,11 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="885a4959-0ea8-4235-a9ad-4121af693aad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/costumerUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/costumerUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/orderNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/orderNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/order.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/order.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finals/pendingOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finals/pendingOrders.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,7 +408,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="login_page" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
+    <configuration name="pendingOrders" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
       <module name="Finals.app.main" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -463,7 +459,7 @@
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="com.example.finals.login_page" />
+      <option name="ACTIVITY_CLASS" value="com.example.finals.pendingOrders" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
@@ -473,10 +469,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Android App.MainActivity" />
+        <item itemvalue="Android App.pendingOrders" />
         <item itemvalue="Android App.MainActivity2" />
         <item itemvalue="Android App.costumerUI" />
         <item itemvalue="Android App.adminui" />
-        <item itemvalue="Android App.login_page" />
       </list>
     </recent_temporary>
   </component>

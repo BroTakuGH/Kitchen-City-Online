@@ -94,8 +94,9 @@ public class pendingOrders extends AppCompatActivity {
 //                        Orders1 = snapshot.child("2021sha01129").child("orders").getValue(String.class);
 //                        Extra_Rice1 = snapshot.child("2021sha01129").child("extraRice").getValue(int.class);
 //                        Drinks1 = snapshot.child("2021sha01129").child("drinks").getValue(String.class);
-
+                        your_array.clear();
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+
                             ma = snapshot.getValue().toString();
                             System.out.println("TEST" + ma);
                             your_array.add(ma);
