@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#181D2D"
+    android:background="#F7F7F7"
     tools:context=".cart">
 
     <LinearLayout
@@ -14,12 +14,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your order"
             android:textSize="20sp"
             android:fontFamily="sans-serif-black"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
+
 
         <ListView
             android:id="@+id/resultsListView"
@@ -29,51 +30,125 @@
             android:background="@color/white"/>
 
 
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginTop="20dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Total: "-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="@color/black"/>-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="150"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="@color/black"/>-->
+
+<!--            </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="13dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_marginTop="20dp"
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total: "
-                    android:layout_gravity="start"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"/>
+                    android:orientation="vertical"
+                    android:gravity="start">
 
 
-                <TextView
-                    android:id="@+id/totalPrice"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/Item1Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="150"
-                    android:layout_gravity="end"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"/>
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₱ "
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="150"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/payOrder"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center"
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="PAY ORDER"/>
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/payOrder"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_corner"
+            android:text="CHECK OUT"
+            android:textSize="20dp"
+            android:textColor="#808080"/>
 
     </LinearLayout>
 
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/menu_bar2"
-        android:background="@drawable/shape"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nav_bar2"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemTextColor="#000000"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/item_menu2" />
+
+
 
 </RelativeLayout>

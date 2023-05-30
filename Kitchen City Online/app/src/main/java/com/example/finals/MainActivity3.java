@@ -4,6 +4,7 @@ import static com.google.firebase.database.FirebaseDatabase.getInstance;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -49,8 +50,8 @@ private EditText password_input;
         Methods methods = new Methods();
 
 
-        TextView backToLogin = findViewById(R.id.signup);
-        TextView signup = findViewById(R.id.loginButton);
+        AppCompatButton backToLogin = findViewById(R.id.signup);
+        AppCompatButton signup = findViewById(R.id.loginButton);
         backToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

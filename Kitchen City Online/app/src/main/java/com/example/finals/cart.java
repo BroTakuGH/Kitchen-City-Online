@@ -40,7 +40,7 @@ public class cart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kitchencityonline-1fbdb-default-rtdb.asia-southeast1.firebasedatabase.app");
-        nav2 = findViewById(R.id.nav_bar2);
+        nav2 = findViewById(R.id.bottom_navigation);
         String costumerOrder [] = {};
         String orders2 = OrderManager.GetInstance().listViewContent;
 
@@ -50,12 +50,12 @@ public class cart extends AppCompatActivity {
 
                 switch (item.getItemId()){
 
-                    case R.id.home:
-                        Intent intent=new Intent(cart.this,costumerUI.class);
+                    case R.id.nav_home:
+                        Intent intent=new Intent(cart.this, costumerUI.class);
                         startActivity(intent);
                         break;
 
-                    case R.id.logout:
+                    case R.id.nav_logout:
                         Intent intent2=new Intent(cart.this,MainActivity2.class);
                         startActivity(intent2);
                         break;

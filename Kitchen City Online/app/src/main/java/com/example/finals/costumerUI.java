@@ -2,12 +2,15 @@ package com.example.finals;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +21,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -70,7 +74,7 @@ public class costumerUI extends AppCompatActivity {
         //Declaration
 
         setContentView(R.layout.costumerui);
-        nav = findViewById(R.id.nav_bar);
+        nav = findViewById(R.id.bottom_navigation);
 
 
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -79,12 +83,12 @@ public class costumerUI extends AppCompatActivity {
 
                     switch (item.getItemId()){
 
-                        case R.id.shoppingCart:
+                        case R.id.nav_cart:
                             Intent intent=new Intent(costumerUI.this,cart.class);
                             startActivity(intent);
                             break;
 
-                        case R.id.logout:
+                        case R.id.nav_logout:
                             Intent intent2=new Intent(costumerUI.this,MainActivity2.class);
                             startActivity(intent2);
                             break;
@@ -300,6 +304,18 @@ public class costumerUI extends AppCompatActivity {
             @Override
             public void onClick(View view){
 
+//                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+//                        costumerUI.this, R.style.BottomSheetDialogTheme
+//                );
+//                View bottomSheetView = LayoutInflater.from(getApplicationContext())
+//                        .inflate(
+//                                R.layout.activity_layout_bottom_sheet,
+//                                (RelativeLayout)findViewById(R.id.bottomSheetContainer)
+//                        );
+//                bottomSheetDialog.setContentView(bottomSheetView);
+//                bottomSheetDialog.show();
+
+
                 databaseReference.child("Images").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -307,9 +323,19 @@ public class costumerUI extends AppCompatActivity {
                             imageURL = snapshot.child("1").child("imageURL").getValue(String.class);
                             System.out.println(imageURL);
                             Intent intent=new Intent(com.example.finals.costumerUI.this,order.class);
+//                            BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+//                                    costumerUI.this, R.style.BottomSheetDialogTheme
+//                            );
+//                            View bottomSheetView = LayoutInflater.from(getApplicationContext())
+//                                    .inflate(
+//                                            R.layout.activity_layout_bottom_sheet,
+//                                            (RelativeLayout)findViewById(R.id.bottomSheetContainer)
+//                                    );
                             intent.putExtra("captiono",CaptionDisplay1);
                             intent.putExtra("priceo",Price);
                             intent.putExtra("imageo", imageURL);
+//                            bottomSheetDialog.setContentView(bottomSheetView);
+//                            bottomSheetDialog.show();
                             startActivity(intent);
                     }
 
